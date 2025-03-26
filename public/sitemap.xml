@@ -2,21 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.com/posts/</loc>
+    <loc>https://pzzblog.netlify.app/posts/</loc>
     <lastmod>2025-03-26T16:51:19+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/</loc>
+    <loc>https://pzzblog.netlify.app/</loc>
     <lastmod>2025-03-26T16:51:19+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/posts/test/</loc>
+    <loc>https://pzzblog.netlify.app/posts/test/</loc>
     <lastmod>2025-03-25T20:54:35+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/about/</loc>
+    <loc>https://pzzblog.netlify.app/about/</loc>
   </url><url>
-    <loc>https://example.com/categories/</loc>
+    <loc>https://pzzblog.netlify.app/categories/</loc>
   </url><url>
-    <loc>https://example.com/tags/</loc>
+    <loc>https://pzzblog.netlify.app/tags/</loc>
   </url><url>
-    <loc>https://example.com/posts/text2/</loc>
+    <loc>https://pzzblog.netlify.app/posts/text2/</loc>
   </url>
 </urlset>
