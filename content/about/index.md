@@ -2,7 +2,6 @@
 
 title = 'About'
 discription = 'About Page'
-draft = false
 
 +++
 

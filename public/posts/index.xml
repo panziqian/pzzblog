@@ -2,31 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on pzzの博客</title>
-    <link>http://localhost:1313/posts/</link>
+    <link>https://example.com/posts/</link>
     <description>Recent content in Posts on pzzの博客</description>
     <generator>Hugo -- 0.145.0</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 26 Mar 2025 16:51:19 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>线性代数笔记</title>
-      <link>http://localhost:1313/posts/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%94%E8%AE%B0/</link>
-      <pubDate>Wed, 26 Mar 2025 16:51:19 +0800</pubDate>
-      <guid>http://localhost:1313/posts/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%94%E8%AE%B0/</guid>
-      <description>&lt;p&gt;本文简要的整理了作者学习线性代数的笔记&lt;/p&gt;</description>
-    </item>
+    <lastBuildDate>Tue, 25 Mar 2025 20:54:35 +0800</lastBuildDate>
+    <atom:link href="https://example.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Test</title>
-      <link>http://localhost:1313/posts/test/</link>
+      <link>https://example.com/posts/test/</link>
       <pubDate>Tue, 25 Mar 2025 20:54:35 +0800</pubDate>
-      <guid>http://localhost:1313/posts/test/</guid>
+      <guid>https://example.com/posts/test/</guid>
       <description>&lt;p&gt;test test&lt;/p&gt;</description>
     </item>
     <item>
       <title>test2</title>
-      <link>http://localhost:1313/posts/text2/</link>
+      <link>https://example.com/posts/text2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/text2/</guid>
+      <guid>https://example.com/posts/text2/</guid>
       <description></description>
     </item>
   </channel>
