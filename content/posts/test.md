@@ -5,7 +5,8 @@ title = 'Test'
 
 +++
 
-
+test test
+<!--more-->
 
 ## Introduction
 

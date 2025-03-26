@@ -1,4 +1,37 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'pzz site'
-theme = 'ananke'
+baseURL = "https://example.com/"
+languageCode = "zh-cn"
+title = "pzzの博客"
+theme = "papermod"
+
+[params]
+  author = "KiritoBP"
+  description = "一个使用 Hugo & PaperMod 搭建的博客"
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowToc = true
+  TocOpen = false
+  defaultTheme = "auto" # 自动适配深色/浅色模式
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "🏠 首页"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "archives"
+    name = "📜 归档"
+    url = "/archives/"
+    weight = 2
+    disable = true
+
+  [[menu.main]]
+    identifier = "about"
+    name = "👤 关于"
+    url = "/about/"
+    weight = 3
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
