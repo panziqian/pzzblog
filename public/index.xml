@@ -1,40 +1,52 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>pzzの博客</title>
-    <link>https://pzzblog.netlify.app/</link>
-    <description>Recent content on pzzの博客</description>
-    <generator>Hugo -- 0.145.0</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Wed, 26 Mar 2025 16:51:19 +0800</lastBuildDate>
-    <atom:link href="https://pzzblog.netlify.app/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>线性代数笔记</title>
-      <link>https://pzzblog.netlify.app/posts/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%94%E8%AE%B0/</link>
-      <pubDate>Wed, 26 Mar 2025 16:51:19 +0800</pubDate>
-      <guid>https://pzzblog.netlify.app/posts/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%94%E8%AE%B0/</guid>
-      <description>&lt;p&gt;本文简要的整理了作者学习线性代数的笔记&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Test</title>
-      <link>https://pzzblog.netlify.app/posts/test/</link>
-      <pubDate>Tue, 25 Mar 2025 20:54:35 +0800</pubDate>
-      <guid>https://pzzblog.netlify.app/posts/test/</guid>
-      <description>&lt;p&gt;test test&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>About</title>
-      <link>https://pzzblog.netlify.app/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://pzzblog.netlify.app/about/</guid>
-      <description>&lt;p&gt;This is a about page introducing myself.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>test2</title>
-      <link>https://pzzblog.netlify.app/posts/text2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://pzzblog.netlify.app/posts/text2/</guid>
-      <description></description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>
+    RSS feed
+ | pzzの博客</title>
+        <link>/</link>
+        <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+        <description>
+            Recent Content | 
+    RSS feed
+ | pzzの博客
+        </description>
+        <generator>Hugo -- gohugo.io</generator>
+        
+            <language>zh-cn</language>
+        
+        
+        
+        
+        
+            <lastBuildDate>
+                Tue, 25 Mar 2025 20:54:35 CST
+            </lastBuildDate>
+        
+        
+        
+    
+        <item>
+            <title>Test</title>
+            <link>/posts/test/</link>
+            <pubDate>Tue, 25 Mar 2025 20:54:35 CST</pubDate>
+            
+            <guid isPermaLink="false">/posts/test/</guid>
+            <description>&lt;p&gt;test test&lt;/p&gt;
+&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;测试blog&lt;/p&gt;
+&lt;p&gt;This is a &lt;strong&gt;blod&lt;/strong&gt; text.&lt;/p&gt;</description>
+        </item>
+    
+        <item>
+            <title>test2</title>
+            <link>/posts/text2/</link>
+            <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+            
+            <guid isPermaLink="false">/posts/text2/</guid>
+            <description></description>
+        </item>
+    
+
+    </channel>
+</rss> 

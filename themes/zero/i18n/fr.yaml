@@ -1,0 +1,105 @@
+- id: copyright
+  translation: Tous Droits Réservés.
+
+- id: count
+  one: mot
+  other: mots
+
+- id: reading-time
+  translation: Temps estimé
+
+- id: minutes
+  one: minute
+  other: minutes
+
+- id: hello
+  translation: Bonjour!
+
+- id: 404-des
+  translation: Il n'y a rien ici.
+
+- id: toc
+  translation: Sommaire
+
+- id: recent_content
+  translation: Contenu Récent
+
+- id: rss_feed
+  translation: Flux RSS
+
+- id: figure
+  translation: Figure
+
+- id: other-articles
+  translation: Voir également
+
+- id: num_other
+  translation: 'no {{ . }}: '
+
+- id: this-article
+  translation: " (Celui-là!)"
+
+- id: not-show
+  translation: "S'il ne s'affiche pas, cliquez "
+
+- id: here
+  translation: ici
+
+- id: download
+  translation: " pour le télécharger"
+
+- id: summary
+  translation: Résumé
+
+- id: total_book
+  one: "j’ai lu {{ . }} livre au total:"
+  other: "j’ai lu {{ . }} livres au total:"
+
+- id: year_record
+  translation: "En {{ . }}, "
+
+- id: book_title
+  translation: "Titre: "
+
+- id: mark_date
+  translation: "Marque Date: "
+
+- id: my_score
+  translation: "Mon score: "
+
+- id: author
+  translation: "Auteur: "
+
+- id: my_comment
+  translation: "Mon commentaire: "
+
+- id: public_year
+  translation: "Année Publique: "
+
+- id: press
+  translation: "Editeur: "
+
+- id: total_film
+  one: "j’ai regardé {{ . }} film ou série télévisée au total:"
+  other: "j’ai regardé {{ . }} films ou séries télévisées au total:"
+
+- id: film_title
+  translation: "Nom: "
+
+- id: ori_name
+  translation: "Nom Original: "
+
+- id: film_type
+  translation: "Genre: "
+
+- id: produce_country
+  translation: "Régions: "
+
+- id: director
+  translation: "Réalisateur: "
+
+- id: average_score
+  translation: " (mon score moyen est: {{ . }})"
+
+- id: search
+  translation: "Rechercher…"

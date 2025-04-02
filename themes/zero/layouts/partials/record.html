@@ -1,0 +1,204 @@
+{{ $curr_page := . }}
+{{ range $key, $value := $.Site.Data }}
+    {{ if eq $key $curr_page.Language.Lang }}
+
+        {{ if eq ($curr_page.Param "menu.main.identifier") "book" }}
+        <!-- 下面是读过的书 -->
+            {{ $book_overview := dict }}
+            {{ $total_score_book := 0 }}
+            <!-- 先 range 一遍，得到年份分布，即每一年分别标记了多少 -->
+            {{ range $value.book }}
+                {{ if (index $book_overview (substr .mark_date 0 4)) }}
+                    {{ $book_overview = merge $book_overview
+                        (dict (substr .mark_date 0 4) (add 1
+                            (index $book_overview (substr .mark_date 0 4)))
+                        )
+                    }}
+                {{ else }}
+                    {{ $book_overview = merge $book_overview (dict (substr .mark_date 0 4) 1) }}
+                {{ end }}
+                {{ if .my_score }}
+                    {{ $total_score_book = add $total_score_book (div (len .my_score) 1.5) }}
+                {{ end }}
+            {{ end }}
+            <p data-pagefind-ignore style="color: var(--c-read); margin: auto;">-----</p>
+            <p data-pagefind-ignore style="color: var(--c-read); margin: auto;">
+                {{ i18n "total_book" (len $value.book) }}
+            </p>
+            <p data-pagefind-ignore style="color: var(--c-read); margin: auto;">
+                {{ i18n "average_score" ((div (add $total_score_book 0.0) (len $value.book)) | lang.FormatNumber 2) }}
+            </p>
+            <p data-pagefind-ignore style="color: var(--c-read); margin: auto;">-----</p>
+            <div class="record-table-wrapper">
+                <table style="undefined; table-layout: fixed; width: 1000px; margin: auto; border-collapse: collapse;">
+                    <colgroup>
+                        <col style="width: 60px">
+                        <col style="width: 340px">
+                        <col style="width: 300px">
+                        <col style="width: 300px">
+                    </colgroup>
+                    <tbody>
+                        {{ $curr_year := 0 }}
+                        {{ $curr_num := (len $value.book) }}
+                        {{ $eoo := "odd" }}
+                        {{ if (modBool $curr_num 2) }}
+                            {{ $eoo = "even" }}
+                        {{ end }}
+                        {{ range $value.book }}
+                            {{ if ne (substr .mark_date 0 4) $curr_year }}
+                                {{ $curr_year = (substr .mark_date 0 4) }}
+                                <tr data-pagefind-ignore>
+                                    <td class="record-total-cell" colspan="4">
+                                        {{ i18n "year_record" ($curr_year) }}{{ i18n "total_book" (index $book_overview $curr_year) }}
+                                    </td>
+                                </tr>
+                            {{ end }}
+                            <tr>
+                                <td data-pagefind-ignore class="record-{{ $eoo }}-cell">{{ $curr_num }}</td>
+                                <td class="record-{{ $eoo }}-cell"><span data-pagefind-ignore>{{ i18n "book_title" }}</span>
+                                    {{- if .link -}}
+                                        <a href="{{ .link }}" target="_blank" rel="noreferrer noopener">{{- .title -}}<b>⧉ </b></a>
+                                    {{- else -}}
+                                        {{- .title -}}
+                                    {{- end -}}
+                                </td>
+                                <td data-pagefind-ignore class="record-{{ $eoo }}-cell">{{ i18n "mark_date" }}{{ substr .mark_date 0 10 | time.Format ":date_long" }}</td>
+                                <td data-pagefind-ignore class="record-{{ $eoo }}-cell">{{ i18n "my_score" }}{{ .my_score }}</td>
+                            </tr>
+                            <tr>
+                                <td class="record-blank-cell" rowspan="4"></td>
+                                <td data-pagefind-ignore class="record-{{ $eoo }}-cell">{{ i18n "author" }}{{ .author }}</td>
+                                <td class="record-{{ $eoo }}-cell" colspan="2" rowspan="4">
+                                    <span data-pagefind-ignore>{{ i18n "my_comment" }}</span>
+                                    {{ .my_comment | markdownify }}
+                                </td>
+                            </tr>
+                            <tr data-pagefind-ignore>
+                                <td class="record-{{ $eoo }}-cell">{{ i18n "public_year" }}{{ .public_year }}</td>
+                            </tr>
+                            <tr data-pagefind-ignore>
+                                <td class="record-{{ $eoo }}-cell">{{ i18n "press" }}{{ .press }}</td>
+                            </tr>
+                            <tr data-pagefind-ignore>
+                                <td class="record-{{ $eoo }}-cell">ISBN：{{ .isbn }}</td>
+                            </tr>
+                            {{ $curr_num = sub $curr_num 1 }}
+                            {{ if eq $eoo "odd" }}
+                                {{ $eoo = "even" }}
+                            {{ else if eq $eoo "even" }}
+                                {{ $eoo = "odd" }}
+                            {{ end }}
+                        {{ end }}
+                    </tbody>
+                </table>
+            </div>
+
+        {{ else if eq ($curr_page.Param "menu.main.identifier") "film" }}
+        <!-- 下面是看过的电影 -->
+            {{ $film_overview := dict }}
+            {{ $total_score_film := 0 }}
+            <!-- 先 range 一遍，得到年份分布，即每一年分别标记了多少 -->
+            {{ range $value.film }}
+                {{ if (index $film_overview (substr .mark_date 0 4)) }}
+                    {{ $film_overview = merge $film_overview
+                        (dict (substr .mark_date 0 4) (add 1
+                            (index $film_overview (substr .mark_date 0 4)))
+                        )
+                    }}
+                {{ else }}
+                    {{ $film_overview = merge $film_overview (dict (substr .mark_date 0 4) 1) }}
+                {{ end }}
+                {{ if .my_score }}
+                    {{ $total_score_film = add $total_score_film (div (len .my_score) 1.5) }}
+                {{ end }}
+            {{ end }}
+            <p data-pagefind-ignore style="color: var(--c-read); margin: auto;">-----</p>
+            <p data-pagefind-ignore style="color: var(--c-read); margin: auto;">
+                {{ i18n "total_film" (len $value.film) }}
+            </p>
+            <p data-pagefind-ignore style="color: var(--c-read); margin: auto;">
+                {{ i18n "average_score" ((div (add $total_score_film 0.0) (len $value.film)) | lang.FormatNumber 2) }}
+            </p>
+            <p data-pagefind-ignore style="color: var(--c-read); margin: auto;">-----</p>
+            <div class="record-table-wrapper">
+                <table style="undefined; table-layout: fixed; width: 1000px; margin: auto; border-collapse: collapse;">
+                    <colgroup>
+                        <col style="width: 60px">
+                        <col style="width: 210px">
+                        <col style="width: 190px">
+                        <col style="width: 270px">
+                        <col style="width: 270px">
+                    </colgroup>
+                    <tbody>
+                        {{ $curr_year := 0 }}
+                        {{ $curr_num := (len $value.film) }}
+                        {{ $eoo := "odd" }}
+                        {{ if (modBool $curr_num 2) }}
+                            {{ $eoo = "even" }}
+                        {{ end }}
+                        {{ range $value.film }}
+                            {{ if ne (substr .mark_date 0 4) $curr_year }}
+                                {{ $curr_year = (substr .mark_date 0 4) }}
+                                <tr data-pagefind-ignore>
+                                    <td class="record-total-cell" colspan="5">
+                                        {{ i18n "year_record" ($curr_year) }}{{ i18n "total_film" (index $film_overview $curr_year) }}
+                                    </td>
+                                </tr>
+                            {{ end }}
+                            <tr>
+                                <td data-pagefind-ignore class="record-{{ $eoo }}-cell">{{ $curr_num }}</td>
+                                <td class="record-{{ $eoo }}-cell" colspan="2"><span data-pagefind-ignore>{{ i18n "film_title" }}</span>
+                                    {{- if .link -}}
+                                        <a href="{{ .link }}" target="_blank" rel="noreferrer noopener">{{- .title -}}<b>⧉ </b></a>
+                                    {{- else -}}
+                                        {{- .title -}}
+                                    {{- end -}}
+                                </td>
+                                <td data-pagefind-ignore class="record-{{ $eoo }}-cell">
+                                    {{ i18n "mark_date" }}{{ substr .mark_date 0 10 | time.Format ":date_long" }}
+                                </td>
+                                <td data-pagefind-ignore class="record-{{ $eoo }}-cell">
+                                    {{ i18n "my_score" }}{{ .my_score }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="record-blank-cell" rowspan="4"></td>
+                                <td data-pagefind-ignore class="record-{{ $eoo }}-cell" colspan="2">
+                                    {{ i18n "ori_name" }}{{ .ori_name }}
+                                </td>
+                                <td class="record-{{ $eoo }}-cell" colspan="2" rowspan="4">
+                                    <span data-pagefind-ignore>{{ i18n "my_comment" }}</span>
+                                    {{ .my_comment | markdownify }}
+                                </td>
+                            </tr>
+                            <tr data-pagefind-ignore>
+                                <td class="record-{{ $eoo }}-cell" colspan="2">{{ i18n "director" }}{{ .director }}</td>
+                            </tr>
+                            <tr data-pagefind-ignore>
+                                <td class="record-{{ $eoo }}-cell">{{ i18n "film_type" }}{{ .film_type }}</td>
+                                <td class="record-{{ $eoo }}-cell">{{ i18n "produce_country" }}{{ .produce_country }}</td>
+                            </tr>
+                            <tr data-pagefind-ignore>
+                                <td class="record-{{ $eoo }}-cell">{{ i18n "public_year" }}{{ .public_year }}</td>
+                                <td class="record-{{ $eoo }}-cell">IMDB：
+                                    {{- if .imdb_id -}}
+                                        <a href="https://www.imdb.com/title/{{ .imdb_id }}/" target="_blank" rel="noreferrer noopener">{{- .imdb_id -}}<b>⧉ </b></a>
+                                    {{- end -}}
+                                </td>
+                            </tr>
+                            {{ $curr_num = sub $curr_num 1 }}
+                            {{ if eq $eoo "odd" }}
+                                {{ $eoo = "even" }}
+                            {{ else if eq $eoo "even" }}
+                                {{ $eoo = "odd" }}
+                            {{ end }}
+                        {{ end }}
+                    </tbody>
+                </table>
+            </div>
+
+        {{ end }}
+
+    {{ end }}
+{{ end }}
+

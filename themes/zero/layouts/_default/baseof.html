@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang='{{ .Language.Lang }}' class='theme-container'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=divice-width, initial-scale=1.0'>
+    {{ block "head_meta" . }}{{ end }}
+    {{ hugo.Generator }}
+    <title>
+        {{ block "head_title" . }}{{ end }} | {{ .Site.Title }}
+    </title>
+
+    <!-- CSS 外链，进行了小屏幕的适配 -->
+    <!-- 使用了 Hugo Pipes 来 minify 静态文件 -->
+    {{ $style_base := resources.Get "css/base.css" | minify | fingerprint }}
+    {{ $style_small := resources.Get "css/small.css" | minify | fingerprint }}
+    {{ $style_normal := resources.Get "css/normal.css" | minify | fingerprint }}
+    <link rel='stylesheet' type='text/css' href='{{ $style_base.RelPermalink }}' />
+    <link rel='stylesheet' media='screen and (max-width: 1200px)'
+        type='text/css' href='{{ $style_small.RelPermalink }}' />
+    <link rel='stylesheet' media='screen and (min-width: 1201px)'
+        type='text/css' href='{{ $style_normal.RelPermalink }}' />
+
+    <!-- highlight 自动生成配色 -->
+    {{ $style_syntax := resources.Get "css/syntax.css" | minify | fingerprint }}
+    <link rel='stylesheet' type='text/css' href='{{ $style_syntax.RelPermalink }}' />
+
+    <!-- 主题颜色深浅的外链 js -->
+    <!-- 使用了 Hugo Pipes 来 minify 静态文件 -->
+    {{ $cthemeJs := resources.Get "js/ctheme.js" | minify | fingerprint }}
+    <script src='{{ $cthemeJs.RelPermalink }}'></script>
+
+    <!--KaTeX 的引用（v 0.16.0）-->
+    {{ if (and .IsPage (eq .Params.markup "pandoc")) }}
+        <!-- katex -->
+        {{ $style_katex := resources.Get "katex/katex.css" | minify | fingerprint }}
+        <link rel='stylesheet' type='text/css' href='{{ $style_katex.RelPermalink }}' />
+        {{ $katexJs := resources.Get "katex/katex.js" | minify | fingerprint }}
+        <script defer src='{{ $katexJs.RelPermalink }}'></script>
+
+        <!-- katex auto render -->
+        {{ $karJs := resources.Get "katex/auto-render.js" | minify | fingerprint }}
+        <script defer src='{{ $karJs.RelPermalink }}' onload='renderMathInElement(document.body);'></script>
+
+        <!-- katex copy tex friendly -->
+        {{ $style_kct := resources.Get "katex/copy-tex.css" | minify | fingerprint }}
+        <link rel='stylesheet' type='text/css' href='{{ $style_kct.RelPermalink }}' />
+        {{ $kctJs := resources.Get "katex/copy-tex.js" | minify | fingerprint }}
+        <script defer src='{{ $kctJs.RelPermalink }}'></script>
+    {{ end }}
+
+    <!--Google Analytics 部分以及 GoatCounter 部分-->
+    {{ if not hugo.IsServer }}
+        {{ template "_internal/google_analytics.html" . }}
+        <script data-goatcounter='https://{{ .Param "GoatCounterName" }}.goatcounter.com/count'
+        async src='//gc.zgo.at/count.js'></script>
+    {{ end }}
+</head>
+
+<body>
+<!--小屏幕顶部设计，在宽屏幕中不显示-->
+<nav class='bar_for_phone'>
+    <div class='bar_left_button'>
+        <div class='left_button_for_bar' onclick='ChangeClassLeft()'>
+            <div class='bar1'></div>
+            <div class='bar2'></div>
+            <div class='bar3'></div>
+        </div>
+    </div>
+    <div class='bar_search-box' onclick='startSearch("right")'>
+        <!-- 搜索图标，纯 CSS 绘制 -->
+        <!-- 这里使用的是：https://css-tricks.com/the-shapes-of-css/#aa-magnifying-glass-shape -->
+        <div class='magnifying-glass'></div>
+    </div>
+    <div class='bar_title'>
+        <a href='{{ "/" | relLangURL }}'>{{ .Site.Title }}</a>
+    </div>
+    <div class='bar_right_button'>
+        {{ block "bar_toc" . }}{{ end }}
+    </div>
+</nav>
+
+<!-- 网页端主体-->
+<div class='body_for_pc'>
+    <!--左边栏-->
+    <aside class='left' id='left'>
+        <!--非页脚区-->
+        <div class='left_non-footer' id='left_non-footer'>
+            <!--选项区-->
+            <div class='left_non-footer_option'>
+                <!-- 表示搜索的放大镜图标 -->
+                <div class='left_non-footer_option_search-icon' onclick='startSearch("left_non-footer")'>
+                    <!-- 搜索图标，纯 CSS 绘制 -->
+                    <!-- 这里使用的是：https://css-tricks.com/the-shapes-of-css/#aa-magnifying-glass-shape -->
+                    <div class='magnifying-glass'></div>
+                </div>
+
+                <!-- 主题切换部分 -->
+                <div role='checkbox' aria-checked='true' class='left_non-footer_option_theme-switch'>
+                    <label class='switch'>
+                        <input type='checkbox' class='theme-switcher'
+                            onchange='themeSwitch()'>
+                        <!-- 是明亮模式嘛？checked 为明亮模式. -->
+                        <span class='slider round'></span>
+                    </label>
+                </div>
+
+                <!-- 语言选项部分 -->
+                <ul role='listbox' class='left_non-footer_option_language'>
+                    {{ $curr_page := . }}
+                    {{ $curr_lang := $curr_page.Language.Lang }}
+                    {{ $curr_trans_dict := dict }}
+                    {{ range $curr_page.Translations }}
+                        {{ $curr_trans_dict = merge $curr_trans_dict
+                            (dict .Language.Lang .RelPermalink)
+                        }}
+                    {{ end }}
+                    {{ range $.Site.Home.AllTranslations }}
+                        {{ if (eq .Language.Lang $curr_lang) }}
+                            <li role='option' aria-selected='true' class='left_non-footer_option_active'>
+                                {{ .Language.LanguageName }} ⦿ 
+                            </li>
+                        {{ else }}
+                            {{ if (index $curr_trans_dict .Language.Lang) }}
+                                <li role='option' aria-selected='false' class='left_non-footer_option_non-active'>
+                                    <a href='{{ index $curr_trans_dict .Language.Lang }}'>
+                                        {{ .Language.LanguageName }} ○ 
+                                    </a>
+                                </li>
+                            {{ else }}
+                                <li role='option' class='left_non-footer_option_non-active'>
+                                    {{ .Language.LanguageName }} ⨂ 
+                                </li>
+                            {{ end }}
+                        {{ end }}
+                    {{ end }}
+                </ul>
+
+                <!-- RSS 订阅按钮 -->
+                <div class='left_non-footer_option_rss'>
+                    {{ if .IsNode }}
+                        <div class='left_non-footer_option_active'>
+                            <a href='{{ if not hugo.IsServer }}{{ .Param "baseURL" }}{{ end }}{{ .RelPermalink }}index.xml'>
+                                {{ i18n "rss_feed" }}
+                                <img src='/images/rss.png' alt='RSS icon' />
+                            </a>
+                        </div>
+                    {{ else }}
+                        <div class='left_non-footer_option_non-active'>
+                            {{ i18n "rss_feed" }} ⊠ 
+                        </div>
+                    {{ end }}
+                </div>
+            </div>
+                
+            <!--题目区-->
+            <header class='left_non-footer_head'>
+                <div class='left_non-footer_head_title'>
+                    <a href='{{ "/" | relLangURL }}'>
+                        {{ .Site.Title }}
+                    </a>
+                </div>
+                <div class='left_non-footer_head_subtitle'>(●’◡’●)ﾉ</div>
+            </header>
+
+            <!--导航区-->
+            <!--这里独创的有
+                {{/* if eq .Identifier (path.Base $currentNode.RelPermalink) */}}active{{/* end */}}
+                它是等价于网上找到的下面这一行的
+                {{/* if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) */}}active{{/* end */}}
+            -->
+            <nav class='left_non-footer_main'>
+                {{ $currentNode := . }}
+                {{ range .Site.Menus.main }} {{/* 确保和config中的一级标题的主菜单一致，下面也是 */}}
+                    {{ $if_1_on :=  0 }}
+                    {{ if eq .Identifier (path.Base $currentNode.RelPermalink) |
+                    or (eq .Identifier $currentNode.Section) }}
+                        {{ $if_1_on = 1 }}
+                    {{ end }}
+                    <div {{ if $if_1_on }}data-pagefind-filter='1st-section'{{ end }} class='h1 {{ if $if_1_on }}active{{ end }}'>
+                        <a href='{{ .URL }}'>{{ .Name }}</a>
+                    </div>
+                    {{ if .HasChildren }}
+                        {{ range .Children }}
+                            {{ if ne .Identifier "" }}
+                                {{ $if_2_on := 0 }}
+                                {{ if eq .Identifier (path.Base $currentNode.RelPermalink) |
+                                or (eq .Identifier $currentNode.Params.section) }}
+                                    {{ $if_2_on = 1 }}
+                                {{ end }}
+                                <div {{ if $if_2_on }}data-pagefind-filter='2nd-section'{{ end }} class='h2 {{ if $if_2_on }}active{{ end }}'>
+                                    <a href='{{ .URL }}'>{{ .Name }} </a>
+                                </div>
+                            {{ end }}
+                        {{ end }}
+                    {{ end }}
+                {{end}}
+            </nav>
+        </div>
+
+        <!--页脚版权区-->
+        <footer class='left_footer'>
+            <div class='copyright'>©2019-{{ now.Format "2006" }} {{ i18n "copyright" }}</div>
+        </footer>
+    </aside>
+
+    <!--右边主要部分-->
+    <div
+    {{ if .IsPage }}data-pagefind-body{{ end }}
+    class='right' id='right' onclick='HideBothSide()'>
+        {{ block "right_head" . }}{{ end }}
+        {{ block "right_main" . }}{{ end }}
+    </div>
+
+    <!--目录部分-->
+    {{ block "toc" . }}{{ end }}
+</div>
+
+<!-- 搜索页的 template -->
+<template id='search-zone-template'>
+    <!-- 搜索页，这里的 class 是在 main.js 中装载 template 时才添加的，
+    按需添加（添加到左边是 left_non-footer_search，添加到右边是 right_search），
+    这样能够做到 template 的代码复用。实际的显示是利用 CSS，根据这两个不同的
+    class 控制左右两边的这个部分分别是否显示。
+    -->
+    <div class='' id='search-zone'>
+        <!-- 搜索页的顶栏 -->
+        <div class='search_bar'>
+            <!-- 搜索框 -->
+            <input type='search'
+                id='search-input-box'
+                class='search_bar_search-box'
+                placeholder='{{ i18n "search" }}'
+                autocomplete='off'>
+
+            <!-- 关闭的叉号 -->
+            <div class='search_bar_close-sign' onclick='closeSearch(this)'>
+                <!-- 纯 CSS 绘制，见：https://cssicon.space/#/icon/close -->
+                <div class='close-sign'></div>
+            </div>
+        </div>
+
+        <!-- 搜索结果 -->
+        <div class='search_results'></div>
+    </div>
+</template>
+
+<!-- 搜索结果的 template -->
+<template id='search-result'>
+    <div class='search_results_item'>
+        <div class='search_results_item_title'></div>
+        <div class='search_results_item_content'></div>
+        <div class='search_results_item_tags'>
+            <div class='search_results_item_tags_date'></div>
+            <div class='search_results_item_tags_sections'></div>
+        </div>
+    </div>
+</template>
+
+<!-- 外链 js -->
+<!-- 使用了 Hugo Pipes 来 minify 静态文件 -->
+{{ $mainJs := resources.Get "js/main.js" | fingerprint }}
+<script src='{{ $mainJs.RelPermalink }}'></script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+{{ define "head_meta" }}
+<meta name='robots' content='noindex'>
+{{ end }}
+
+{{ define "head_title" }}                                                       
+    {{ i18n "hello" }}
+{{ end }}
+
+{{ define "right_head" }}
+<header class="right_head">
+    <div class="right_head_title">
+        {{ i18n "hello" }}
+    </div>
+</header>
+{{ end }}
+
+{{ define "right_main" }}
+<main class="right_main">
+    <div class="right_main_article">
+        {{ .Content }}
+    </div>
+    {{ range first 8 (where .Site.RegularPages ".Params.list_hide" "ne" true) }}
+        {{ .Render "summary"}}
+    {{ end }}
+</main>
+{{ end }}

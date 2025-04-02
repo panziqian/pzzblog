@@ -1,0 +1,101 @@
+- id: copyright
+  translation: 版权所有.
+
+- id: count
+  translation: 字
+
+- id: reading-time
+  translation: 阅读时间
+
+- id: minutes
+  translation: 分钟
+
+- id: hello
+  translation: 你好！
+
+- id: 404-des
+  translation: 这里还什么都没有.
+
+- id: toc
+  translation: 目录
+
+- id: recent_content
+  translation: 近期内容
+
+- id: rss_feed
+  translation: RSS 订阅
+
+- id: figure
+  translation: 图
+
+- id: other-articles
+  translation: 友情链接（该栏目下的其他文章）
+
+- id: num_other
+  translation: '第 {{ . }} 期：'
+
+- id: this-article
+  translation: （就是这篇！）
+
+- id: not-show
+  translation: 如果没有显示，请点击
+
+- id: here
+  translation: 这里
+
+- id: download
+  translation: 下载
+
+- id: summary
+  translation: 摘要
+
+- id: total_book
+  translation: "我读了共 {{ . }} 本书："
+
+- id: year_record
+  translation: "在 {{ . }} 年，"
+
+- id: book_title
+  translation: 书名：
+
+- id: mark_date
+  translation: 标记日期：
+
+- id: my_score
+  translation: 打分：
+
+- id: author
+  translation: 作者：
+
+- id: my_comment
+  translation: 评价：
+
+- id: public_year
+  translation: 年份：
+
+- id: press
+  translation: 出版社：
+
+- id: total_film
+  translation: "我看了共 {{ . }} 部电影或电视剧："
+
+- id: film_title
+  translation: 名字：
+
+- id: ori_name
+  translation: 原名：
+
+- id: film_type
+  translation: 类型：
+
+- id: produce_country
+  translation: 地区：
+
+- id: director
+  translation: 导演：
+
+- id: average_score
+  translation: "（我的平均打分是：{{ . }}）"
+
+- id: search
+  translation: "搜索……"

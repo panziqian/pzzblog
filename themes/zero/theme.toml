@@ -1,0 +1,21 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name = "hugo-theme-zero"
+license = "MIT"
+licenselink = "https://github.com/zerovip/hugo-theme-zero/blob/master/LICENSE"
+description = "A simpple hugo theme made by Zero"
+homepage = "https://github.com/zerovip/hugo-theme-zero"
+tags = []
+features = []
+min_version = "0.87.0"
+
+[author]
+  name = "Zero"
+  homepage = "https://zerovip.github.io"
+
+# If porting an existing theme
+[original]
+  name = ""
+  homepage = ""
+  repo = ""

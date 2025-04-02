@@ -1,0 +1,105 @@
+- id: copyright
+  translation: All Right Reserved.
+
+- id: count
+  one: word
+  other: words
+
+- id: reading-time
+  translation: Reading time
+
+- id: minutes
+  one: minute
+  other: minutes
+
+- id: hello
+  translation: Hello!
+
+- id: 404-des
+  translation: Nothing here.
+
+- id: toc
+  translation: Contents
+
+- id: recent_content
+  translation: Recent Content
+
+- id: rss_feed
+  translation: RSS feed
+
+- id: figure
+  translation: Figure
+
+- id: other-articles
+  translation: See also
+
+- id: num_other
+  translation: "No.{{ . }}: "
+
+- id: this-article
+  translation: " (This one!)"
+
+- id: not-show
+  translation: "If it doesn't show, click "
+
+- id: here
+  translation: here
+
+- id: download
+  translation: " to download"
+
+- id: summary
+  translation: Summary
+
+- id: total_book
+  one: "I read {{ . }} book in total:"
+  other: "I read {{ . }} books in total:"
+
+- id: year_record
+  translation: "In {{ . }}, "
+
+- id: book_title
+  translation: "Title: "
+
+- id: mark_date
+  translation: "Mark Date: "
+
+- id: my_score
+  translation: "My Score: "
+
+- id: author
+  translation: "Author: "
+
+- id: my_comment
+  translation: "My Comment: "
+
+- id: public_year
+  translation: "Public Year: "
+
+- id: press
+  translation: "Publisher: "
+
+- id: total_film
+  one: "I watched {{ . }} film or TV series in total:"
+  other: "I watched {{ . }} films or TV series in total:"
+
+- id: film_title
+  translation: "Name: "
+
+- id: ori_name
+  translation: "Original Name: "
+
+- id: film_type
+  translation: "Genre: "
+
+- id: produce_country
+  translation: "Regions: "
+
+- id: director
+  translation: "Director: "
+
+- id: average_score
+  translation: " (my average score is: {{ . }})"
+
+- id: search
+  translation: "Search…"

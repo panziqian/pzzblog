@@ -1,7 +1,7 @@
 baseURL = "https://pzzblog.netlify.app/"
 languageCode = "zh-cn"
 title = "pzzの博客"
-theme = "papermod"
+theme = "zero"
 
 [params]
   author = "KiritoBP"
