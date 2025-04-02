@@ -1,15 +1,18 @@
 +++
 date = '2025-03-26T16:51:19+08:00'
-draft = true
+draft = false
 title = '线性代数笔记'
+list_hide = false
+summary = '本文简要的整理了作者学习线性代数的笔记'
 
 +++
 
 
-本文简要的整理了作者学习线性代数的笔记
-<!--more-->
 
- 
+>!注意 
+>本文的latex数学公式无法正常显示，作者尚未修复该bug
+
+
 >A major application of linear algebra is to solving systems of linear equations
 
 ”线性代数的本质“课程

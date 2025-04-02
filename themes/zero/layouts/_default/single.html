@@ -77,7 +77,7 @@
 
 {{ define "toc" }}
     {{ if and
-        (and (gt .WordCount 400) (ne .Params.no_toc true))
+        (and (gt .WordCount 50) (ne .Params.no_toc true))
         (ne .TableOfContents "<nav id=\"TableOfContents\"></nav>") }}
         <aside data-pagefind-ignore class='toc' id='toc'>
             <button class='toc_title'>{{ i18n "toc" }}</button>

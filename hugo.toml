@@ -20,11 +20,25 @@ theme = "zero"
     weight = 1
 
   [[menu.main]]
+    identifier = "tech"
+    parent = "home"
+    name = "tech"
+    url = "/posts/tech/"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "ss2"
+    parent = "home"
+    name = "life"
+    url = "/posts/life/"
+    weight = 2
+
+  [[menu.main]]
     identifier = "archives"
     name = "📜 归档"
     url = "/archives/"
     weight = 2
-    disable = true
+    
 
   [[menu.main]]
     identifier = "about"
@@ -35,3 +49,8 @@ theme = "zero"
 [taxonomies]
   category = "categories"
   tag = "tags"
+
+  [markup]
+  [markup.tableOfContents]
+    startLevel = 1
+    endLevel = 2
