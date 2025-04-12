@@ -2,16 +2,17 @@
 date = '2025-03-26T16:51:19+08:00'
 draft = false
 title = '线性代数笔记'
-list_hide = false
 summary = '本文简要的整理了作者学习线性代数的笔记'
+math = true
 
 +++
 
 
 
->!注意 
->本文的latex数学公式无法正常显示，作者尚未修复该bug
+>本文的latex数学公式无法正常显示 (已修复)
 
+>目前本文的附件图片尚未上传，无法正常显示
+------------------------------------------------
 
 >A major application of linear algebra is to solving systems of linear equations
 

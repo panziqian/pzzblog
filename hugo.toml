@@ -11,6 +11,7 @@ theme = "zero"
   ShowToc = true
   TocOpen = false
   defaultTheme = "auto" # 自动适配深色/浅色模式
+  math = true
 
 [menu]
   [[menu.main]]
@@ -22,7 +23,7 @@ theme = "zero"
   [[menu.main]]
     identifier = "tech"
     parent = "home"
-    name = "tech"
+    name = "Tech"
     url = "/posts/tech/"
     weight = 1
 

@@ -261,5 +261,6 @@
 {{ $mainJs := resources.Get "js/main.js" | fingerprint }}
 <script src='{{ $mainJs.RelPermalink }}'></script>
 
+{{ partial "head.html" . }}
 </body>
 </html>

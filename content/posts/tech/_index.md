@@ -1,8 +1,8 @@
 +++ 
 
-title = 'tech'
-description = 'tech part'
-menu = 'main'
+title = "Tech"
+description = "tech part"
+
 
 +++
 

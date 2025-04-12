@@ -20,21 +20,11 @@
         
         
             <lastBuildDate>
-                Wed, 02 Apr 2025 00:00:00 UTC
+                Wed, 26 Mar 2025 16:51:19 CST
             </lastBuildDate>
         
         
         
-    
-        <item>
-            <title>Example Post</title>
-            <link>/posts/tech/tech1/</link>
-            <pubDate>Wed, 02 Apr 2025 00:00:00 UTC</pubDate>
-            
-            <guid isPermaLink="false">/posts/tech/tech1/</guid>
-            <description>&lt;p&gt;这是一个示例文章。&lt;/p&gt;
-</description>
-        </item>
     
         <item>
             <title>线性代数笔记</title>
@@ -43,8 +33,10 @@
             
             <guid isPermaLink="false">/posts/tech/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%94%E8%AE%B0/</guid>
             <description>&lt;blockquote&gt;
-&lt;p&gt;!注意
-本文的latex数学公式无法正常显示，作者尚未修复该bug&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;本文的latex数学公式无法正常显示 (已修复)&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;目前本文的附件图片尚未上传，无法正常显示&lt;/p&gt;&lt;/blockquote&gt;
+&lt;hr&gt;
 &lt;blockquote&gt;
 &lt;p&gt;A major application of linear algebra is to solving systems of linear equations&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;”线性代数的本质“课程
@@ -216,27 +208,6 @@ $$\vec{x}=A\vec{y}或\vec{y}=A^{-1}\vec{x} $$
 普适的代价是抽象。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;em&gt;善于运用直观思维。&lt;/em&gt;&lt;/p&gt;
 </description>
-        </item>
-    
-        <item>
-            <title>Test</title>
-            <link>/posts/test/</link>
-            <pubDate>Tue, 25 Mar 2025 20:54:35 CST</pubDate>
-            
-            <guid isPermaLink="false">/posts/test/</guid>
-            <description>&lt;p&gt;test test&lt;/p&gt;
-&lt;h2&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;测试blog&lt;/p&gt;
-&lt;p&gt;This is a &lt;strong&gt;blod&lt;/strong&gt; text.&lt;/p&gt;</description>
-        </item>
-    
-        <item>
-            <title>test2</title>
-            <link>/posts/text2/</link>
-            <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-            
-            <guid isPermaLink="false">/posts/text2/</guid>
-            <description></description>
         </item>
     
 
