@@ -11,7 +11,7 @@ math = true
 
 >本文的latex数学公式无法正常显示 (已修复)
 
->目前本文的附件图片尚未上传，无法正常显示
+>目前本文的附件图片尚未上传，无法正常显示(已修复)
 ------------------------------------------------
 
 >A major application of linear algebra is to solving systems of linear equations
