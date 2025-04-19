@@ -1,0 +1,7 @@
+<!-- 示例：支持 width, height, class -->
+<img src="{{ .Get "src" | safeURL }}" 
+     alt="{{ .Get "alt" }}" 
+     width="{{ .Get "width" }}" 
+     height="{{ .Get "height" }}" 
+     class="{{ .Get "class" }}" 
+     loading="lazy" />

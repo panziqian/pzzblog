@@ -186,7 +186,7 @@
     <header class="right_head">
         <div data-pagefind-meta="title" class="right_head_title">线性代数笔记</div>
         <div data-pagefind-ignore class="right_head_des">
-            <span data-pagefind-meta="date">March 26, 2025</span> - 232 words
+            <span data-pagefind-meta="date">March 26, 2025</span> - 213 words
         </div>
     </header>
 
@@ -337,14 +337,18 @@ youtube <a href='https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFi
 <p>$\vec{v}\times\vec{w}$ 的绝对值等于以$\vec{v}$和$\vec{w}$向量为边长组成的平行四边形的面积，方向遵循右手定则</p>
 <p>叉积通过两个三维向量生成一个新的三维向量，且新的三维向量与原来的两个向量都垂直，方向遵循右手定则</p>
 <p>通过矩阵行列式计算叉积</p>
-<p>![[Pasted image 20241209144555.png]]</p>
+<figure><img src="/images/20241209144555.png" width="600px">
+</figure>
+
 <h2 id='deeper-understanding'>
     Deeper understanding
     <a href='#deeper-understanding'><small data-pagefind-ignore>¶</small></a>
 </h2>
-<p>通过矩阵行列式计算叉积的方法是具有其几何意义的。叉积可以看作一个函数，输入两个向量，然后输出一个新的向量。我们可以定义一个从三维空间到数轴的线性变换，该线性变换只与$\vec{v}$和$\vec{w}$向量有关，那么我们可以通过矩阵乘法去描述这个线性变换，即存在一个$1\times3$的矩阵代表这个变换。而根据对偶性，我们可以将该矩阵立起来变成一个$3\times1$的向量$\vec{p}$，使得$\vec{p}$与任一向量(x,y,z)的点积等于一个$3\times3$的行列式，且该行列式的结果是以(x,y,z)、$\vec{v}$和$\vec{w}$构成的平行六面体的体积。
-![[Pasted image 20241209151829.png]]
-<em>那么，问题就变成了怎么样的$\vec{p}$能够满足上述性质</em>
+<p>通过矩阵行列式计算叉积的方法是具有其几何意义的。叉积可以看作一个函数，输入两个向量，然后输出一个新的向量。我们可以定义一个从三维空间到数轴的线性变换，该线性变换只与$\vec{v}$和$\vec{w}$向量有关，那么我们可以通过矩阵乘法去描述这个线性变换，即存在一个$1\times3$的矩阵代表这个变换。而根据对偶性，我们可以将该矩阵立起来变成一个$3\times1$的向量$\vec{p}$，使得$\vec{p}$与任一向量(x,y,z)的点积等于一个$3\times3$的行列式，且该行列式的结果是以(x,y,z)、$\vec{v}$和$\vec{w}$构成的平行六面体的体积。</p>
+<figure><img src="/images/20241209151829.png">
+</figure>
+
+<p><em>那么，问题就变成了怎么样的$\vec{p}$能够满足上述性质</em>
 即该$\vec{p}$的长度等于$\vec{v}$和$\vec{w}$构成的平行四边形的面积，且方向垂直于$\vec{v}$和$\vec{w}$。此时，$\vec{p}$和(x,y,z)做点积就相当于得到(x,y,z)在$\vec{p}$上的投影向量的长度和$\vec{p}$的长度的乘积，得到的结果正好是行列式的结果——以(x,y,z)、$\vec{v}$和$\vec{w}$构成的平行六面体的体积。
 综上所述，我们通过$\vec{v}$和$\vec{w}$定义了一个函数（线性变换），而$\vec{p}$正代表了这个线性变换。这个定义的过程我们也可以看成是一个函数，那么该函数其实就是叉积。</p>
 <p><strong>于是我们只要求解$\vec{p}$的坐标就能够得出叉积的结果。引入i,j,k是作为一个符号，区分出p1,p2,p3的解，进而得出$\vec{p}$。</strong></p>
@@ -386,8 +390,10 @@ $$</p>
     向量在不同坐标系下的转换
     <a href='#%e5%90%91%e9%87%8f%e5%9c%a8%e4%b8%8d%e5%90%8c%e5%9d%90%e6%a0%87%e7%b3%bb%e4%b8%8b%e7%9a%84%e8%bd%ac%e6%8d%a2'><small data-pagefind-ignore>¶</small></a>
 </h2>
-<p><em>如何在不同坐标系之间进行转换</em>
-![[3d822d9edf615f4a9d51cd8324e2b43.jpg]]</p>
+<p><em>如何在不同坐标系之间进行转换</em></p>
+<figure><img src="/images/3d822d9edf615f4a9d51cd8324e2b43.jpg">
+</figure>
+
 <p>设n维空间中有两个基 （1）$\vec{x}$（2）$\vec{y}$  由基（1）到基（2）的过渡矩阵为A，则有
 $$\vec{x}=A\vec{y}或\vec{y}=A^{-1}\vec{x} $$
 过渡矩阵A以基（1）下表示的基（2）的基向量为列向量构成。</p>
@@ -396,13 +402,19 @@ $$\vec{x}=A\vec{y}或\vec{y}=A^{-1}\vec{x} $$
     <a href='#%e4%bb%a3%e8%a1%a8%e7%ba%bf%e6%80%a7%e5%8f%98%e6%8d%a2%e7%9a%84%e7%9f%a9%e9%98%b5%e5%9c%a8%e4%b8%8d%e5%90%8c%e5%9d%90%e6%a0%87%e7%b3%bb%e4%b8%8b%e7%9a%84%e8%bd%ac%e6%8d%a2'><small data-pagefind-ignore>¶</small></a>
 </h2>
 <p>设初始坐标系为O1，基向量为x，另一坐标系为O2，基向量为y，且存在过渡矩阵使得$\vec{x}=M\vec{y}$这样的关系成立</p>
-<p>在表示代表线性变换的矩阵时，一般的，我们是用O1坐标系下的坐标去跟踪O1坐标系下的基向量。设某一线性变换的矩阵为A，给出O2下的一向量v
-1、v左乘M，将v由O2下的语言转换成O1下的语言
-![[Pasted image 20241209211706.png|600]]</p>
-<p>2 、继续左乘A，将O1下的v进行A（在O1体系下描述）代表的线性变换
-![[Pasted image 20241209211748.png|600]]</p>
-<p>3、继续左乘$M^{-1}$，将线性变换后O1语言描述的v翻译成由O2语言描述
-![[Pasted image 20241209212329.png|600]]</p>
+<p>在表示代表线性变换的矩阵时，一般的，我们是用O1坐标系下的坐标去跟踪O1坐标系下的基向量。设某一线性变换的矩阵为A，给出O2下的一向量v</p>
+<p>1、v左乘M，将v由O2下的语言转换成O1下的语言</p>
+<figure><img src="/images/20241209211706.png" width="100" height="100">
+</figure>
+
+<p>2 、继续左乘A，将O1下的v进行A（在O1体系下描述）代表的线性变换</p>
+<figure><img src="/images/20241209211748.png" width="100" height="100">
+</figure>
+
+<p>3、继续左乘$M^{-1}$，将线性变换后O1语言描述的v翻译成由O2语言描述</p>
+<figure><img src="/images/20241209212329.png">
+</figure>
+
 <p>最终得到的向量$M^{-1}AM\vec{v}$即为O2体系下对v进行与O1体系下描述的矩阵A代表的线性变换等效的线性变换后的向量。</p>
 <p>$M^{-1}AM$暗示着一中数学上的转移作用，其中A代表当前视角下的一个变换，A两侧的矩阵代表着转移作用，即视角上的转换。最后的乘积仍然代表着同一种变换，只是描述的视角发生了改变<del>这不就是相似吗</del></p>
 <h1 id='特征向量与特征值'>
@@ -427,7 +439,9 @@ $$\vec{x}=A\vec{y}或\vec{y}=A^{-1}\vec{x} $$
 <p>满足<strong>可加性</strong>和<strong>成比例</strong>这两条性质的变换是线性变换。</p>
 <p>求导是线性运算</p>
 <p><strong>线性空间的八条公理</strong>
-![[Pasted image 20241209225917.png]]</p>
+<figure><img src="/images/20241209225917.png">
+</figure>
+</p>
 <p>这些公理发挥着媒介的作用，即任何的向量空间，如果满足上述八条公理，即可应用线性代数的所有结论</p>
 <p>抽象向量的形式并不重要，只要其加法和数乘满足上述公理即可。</p>
 <p>向量空间是个高度抽象的概念。</p>

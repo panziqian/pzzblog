@@ -55,3 +55,7 @@ theme = "zero"
   [markup.tableOfContents]
     startLevel = 1
     endLevel = 2
+
+[imaging]
+  resampleFilter = "CatmullRom"
+  quality = 75
