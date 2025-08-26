@@ -2,7 +2,7 @@
 [menu.main]
 identifier = "life"
 parent = "home"
-name = "生活"
+name = "Life"
 url = "/posts/life/"
 weight = 2
 +++

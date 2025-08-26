@@ -2,7 +2,7 @@
 [menu.main]
     identifier = "study"
     parent = "home"
-    name = "Study"
+    name = "学习"
     weight = 1
 +++
 
