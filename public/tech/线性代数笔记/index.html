@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang='en' class='theme-container'>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=divice-width, initial-scale=1.0'>
+    
+    
+
+    <meta name="generator" content="Hugo 0.145.0">
+    <title>
+        
+    线性代数笔记
+ | pzzの博客
+    </title>
+
+    
+    
+    
+    
+    
+    <link rel='stylesheet' type='text/css' href='/css/base.min.77b5736a81ec178b46cb581d1318f5aee784504170c67bf68d9e3c729b7fff42.css' />
+    <link rel='stylesheet' media='screen and (max-width: 1200px)'
+        type='text/css' href='/css/small.min.3b39abcf5074cbb0bd712da27c43d1c5f11a85f597da9f07a0d600e53eec7d24.css' />
+    <link rel='stylesheet' media='screen and (min-width: 1201px)'
+        type='text/css' href='/css/normal.min.ac1ee5c0e20afb15107d14583eece7d76c7fb36009c07be3f3447c299209ca53.css' />
+
+    
+    
+    <link rel='stylesheet' type='text/css' href='/css/syntax.min.ed5b37c3a50997d5ccd8b81bf0d00a7ac1f92c82985623c2dbf0cb422596726a.css' />
+
+    
+    
+    
+    <script src='/js/ctheme.min.23d42d00e692299bcf2b5832c28a8a1582346c7c45d8bc4f70280fcdbf146872.js'></script>
+
+    
+    
+
+    
+    
+</head>
+
+<body>
+
+<nav class='bar_for_phone'>
+    <div class='bar_left_button'>
+        <div class='left_button_for_bar' onclick='ChangeClassLeft()'>
+            <div class='bar1'></div>
+            <div class='bar2'></div>
+            <div class='bar3'></div>
+        </div>
+    </div>
+    <div class='bar_search-box' onclick='startSearch("right")'>
+        
+        
+        <div class='magnifying-glass'></div>
+    </div>
+    <div class='bar_title'>
+        <a href='/'>pzzの博客</a>
+    </div>
+    <div class='bar_right_button'>
+        
+    <button class='toc_title_for_bar' onclick="ChangeClassTOC()">Contents</button>
+
+    </div>
+</nav>
+
+
+<div class='body_for_pc'>
+    
+    <aside class='left' id='left'>
+        
+        <div class='left_non-footer' id='left_non-footer'>
+            
+            <div class='left_non-footer_option'>
+                
+                <div class='left_non-footer_option_search-icon' onclick='startSearch("left_non-footer")'>
+                    
+                    
+                    <div class='magnifying-glass'></div>
+                </div>
+
+                
+                <div role='checkbox' aria-checked='true' class='left_non-footer_option_theme-switch'>
+                    <label class='switch'>
+                        <input type='checkbox' class='theme-switcher'
+                            onchange='themeSwitch()'>
+                        
+                        <span class='slider round'></span>
+                    </label>
+                </div>
+
+                
+                <ul role='listbox' class='left_non-footer_option_language'>
+                    
+                    
+                    
+                    
+                    
+                        
+                            <li role='option' aria-selected='true' class='left_non-footer_option_active'>
+                                 ⦿ 
+                            </li>
+                        
+                    
+                </ul>
+
+                
+                <div class='left_non-footer_option_rss'>
+                    
+                        <div class='left_non-footer_option_non-active'>
+                            RSS feed ⊠ 
+                        </div>
+                    
+                </div>
+            </div>
+                
+            
+            <header class='left_non-footer_head'>
+                <div class='left_non-footer_head_title'>
+                    <a href='/'>
+                        pzzの博客
+                    </a>
+                </div>
+                <div class='left_non-footer_head_subtitle'>(●’◡’●)ﾉ</div>
+            </header>
+
+            
+            
+            <nav class='left_non-footer_main'>
+                
+                 
+                    
+                    
+                    <div  class='h1 '>
+                        <a href='/'>🏠 首页</a>
+                    </div>
+                    
+                        
+                            
+                                
+                                
+                                <div  class='h2 '>
+                                    <a href='/tech/'>Tech </a>
+                                </div>
+                            
+                        
+                            
+                                
+                                
+                                <div  class='h2 '>
+                                    <a href='/posts/life/'>life </a>
+                                </div>
+                            
+                        
+                    
+                 
+                    
+                    
+                    <div  class='h1 '>
+                        <a href='/archives/'>📜 归档</a>
+                    </div>
+                    
+                 
+                    
+                    
+                    <div  class='h1 '>
+                        <a href='/about/'>👤 关于</a>
+                    </div>
+                    
+                
+            </nav>
+        </div>
+
+        
+        <footer class='left_footer'>
+            <div class='copyright'>©2019-2025 All Right Reserved.</div>
+        </footer>
+    </aside>
+
+    
+    <div
+    data-pagefind-body
+    class='right' id='right' onclick='HideBothSide()'>
+        
+    <header class="right_head">
+        <div data-pagefind-meta="title" class="right_head_title">线性代数笔记</div>
+        <div data-pagefind-ignore class="right_head_des">
+            <span data-pagefind-meta="date">March 26, 2025</span> - 213 words
+        </div>
+    </header>
+
+        
+    <div class="right_main">
+        <article class="right_main_article">
+            
+            <blockquote>
+<p>本文的latex数学公式无法正常显示 (已修复)</p></blockquote>
+<blockquote>
+<p>目前本文的附件图片尚未上传，无法正常显示(已修复)</p></blockquote>
+<hr>
+<blockquote>
+<p>A major application of linear algebra is to solving systems of linear equations</p></blockquote>
+<p>”线性代数的本质“课程
+bilibili <a href='https://www.bilibili.com/video/BV1ys411472E?spm_id_from=333.788.videopod.episodes&amp;vd_source=e01b4a397639696962e464553130827c'
+    
+    
+        target='_blank' rel='noreferrer noopener'
+    
+>链接<b><sub data-pagefind-ignore>⧉</sub></b></a>
+youtube <a href='https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab'
+    
+    
+        target='_blank' rel='noreferrer noopener'
+    
+>链接<b><sub data-pagefind-ignore>⧉</sub></b></a></p>
+<h1 id='向量'>
+    向量
+    <a href='#%e5%90%91%e9%87%8f'><small data-pagefind-ignore>¶</small></a>
+</h1>
+<p>物理学角度：由长度和指向决定的空间中的一个自由箭头
+计算机角度：有序的数字列表
+数学角度：可以是任何事物，只要保证两个向量相加以及数字与向量相乘是有意义的即可，暗示了<em>向量加法和乘法贯穿了线性代数的始终</em>
+<strong>应该在这两种角度下反复切换来学习</strong></p>
+<h2 id='向量的数乘'>
+    向量的数乘
+    <a href='#%e5%90%91%e9%87%8f%e7%9a%84%e6%95%b0%e4%b9%98'><small data-pagefind-ignore>¶</small></a>
+</h2>
+<p>缩放是指使向量被拉伸或压缩或反向的过程</p>
+<p>向量数乘中的数字被称为标量（scaler），因为数字在数乘乃至整个线性代数中的作用就是去缩放向量</p>
+<h1 id='线性组合跨度和基向量'>
+    线性组合、跨度和基向量
+    <a href='#%e7%ba%bf%e6%80%a7%e7%bb%84%e5%90%88%e8%b7%a8%e5%ba%a6%e5%92%8c%e5%9f%ba%e5%90%91%e9%87%8f'><small data-pagefind-ignore>¶</small></a>
+</h1>
+<p>一个向量的坐标表示可以看作是一个坐标分量去缩放对应的单位向量（基向量），最后把所有的基向量相加的过程</p>
+<p>两个数乘向量的和被称为两个向量的<strong>线性组合</strong>
+线性的其中一个理解是：将坐标的其中一个标量固定，然后让另一个标量自由变化，所产生的向量的终点最后会描绘出一条直线</p>
+<p>在二维空间下，对两个线性无关的向量来说，这两个向量的线性组合所构成的所有向量构成的组合（set）即为这两个<strong>向量张成的空间</strong>（span）</p>
+<p>在三维空间下，取两个不共线的向量，其张成的空间就是一个平面，再取一个向量，如果这个向量落在了该平面内，那么增加的这个向量并不会扩展span的维度，从某种程度来说这个向量便是多余的。若向量不在这个平面内，则span就会扩展成三维的空间，覆盖整个三维空间。关于扩展成三维空间的思考方式</p>
+<ol>
+<li>前两个向量张成的平面沿第三个向量的方向扫描，最终扩张成三维空间。</li>
+<li>三个线性无关的向量的线性组合能够表示任何一个三维的向量，进而组成三维空间。</li>
+</ol>
+<p><strong>线性相关和线性无关</strong>：如果向量组中每个向量都为span增添了新的维度，那么这个向量组就是线性无关的。如果向量组中有向量并没有为span维度增加作贡献，那么向量组便是线性相关的；如果向量组中有向量落在了其他向量的span中，那么该向量组是线性相关的。</p>
+<p><strong>空间的一组基</strong>：张成该空间的一个线性无关的向量的集合</p>
+<h1 id='线性变换和矩阵'>
+    线性变换和矩阵
+    <a href='#%e7%ba%bf%e6%80%a7%e5%8f%98%e6%8d%a2%e5%92%8c%e7%9f%a9%e9%98%b5'><small data-pagefind-ignore>¶</small></a>
+</h1>
+<p><strong>变换</strong>可以认为是函数的另一种说法，即接受一组输入，并给出一组输出。而变换的特别之处在于变换暗示了这个过程的可视化性。对于向量的变换，可以认为是输入向量移动到输出向量的位置。</p>
+<p>线性变换的性质和条件：</p>
+<ul>
+<li>直线在变换后仍然保持直线，不能弯曲，即保持网格线平行并且等距分布</li>
+<li>原点必须保持固定
+上述性质是<strong>可加性和成比例在二维空间这一特殊情况下的体现</strong></li>
+</ul>
+<p>我们能够通过基向量的线性变换来表示整个空间的线性变换。这样做的依据是一个线性组合在线性变换后仍保持该线性组合。这条性质的来源是线性变换具有保线性。</p>
+<p>对于一个代表线性变换的矩阵，其列向量即为对应的变换后的基向量。若给出一个向量，想知道对这个向量施以某线性变换得到的向量，只需要将该线性变换的矩阵左乘该向量（即将该向量的坐标与矩阵对应列向量相乘，最后得到的新列向量相加），就能得到结果。</p>
+<blockquote>
+<p>如果每一个矩阵都代表一个线性变换，那么对矩阵转置的话，该线性变换会发生什么变化呢</p></blockquote>
+<h1 id='矩阵乘法'>
+    矩阵乘法
+    <a href='#%e7%9f%a9%e9%98%b5%e4%b9%98%e6%b3%95'><small data-pagefind-ignore>¶</small></a>
+</h1>
+<p>矩阵的乘法可以看作是多次线性变换的复合</p>
+<p>矩阵乘积的效果需要从右往左去应用，这也揭示了矩阵乘法没有交换律，也揭示了矩阵乘法具有结合律</p>
+<blockquote>
+<p>多用分块矩阵的思想去思考矩阵乘法的过程</p></blockquote>
+<h1 id='行列式'>
+    行列式
+    <a href='#%e8%a1%8c%e5%88%97%e5%bc%8f'><small data-pagefind-ignore>¶</small></a>
+</h1>
+<p>对于一个方格的面积的变换适用于所有其他大小的方格
+一个矩阵的行列式的绝对值即为线性变换改变面积的比例
+如果一个行列式为零，那么这个矩阵代表的变换将空间压缩到了更小的维度上，并且这个矩阵的列向量是线性相关的
+若行列式的值为负数，说明这个矩阵代表的线性变换改变了空间的定向</p>
+<p>特别的，在三维空间中，矩阵的行列式的绝对值可以看作是一个边长为一的正方体通过矩阵的代表的线性变换形成的平行六面体的体积，即只要给定了平行六面体的三条代表边长的向量，就可以通过三个向量形成的行列式计算出平行六面体的体积。</p>
+<h1 id='逆矩阵列空间秩和零空间'>
+    逆矩阵、列空间、秩和零空间
+    <a href='#%e9%80%86%e7%9f%a9%e9%98%b5%e5%88%97%e7%a9%ba%e9%97%b4%e7%a7%a9%e5%92%8c%e9%9b%b6%e7%a9%ba%e9%97%b4'><small data-pagefind-ignore>¶</small></a>
+</h1>
+<p>求解线性方程组$A\vec{x}=\vec{v}$的几何过程即为寻找一个$\vec{x}$使他在线性变换后与$\vec{v}$重合</p>
+<p>如果线性变换将空间进行了压缩，若$\vec{v}$被包含在列空间内，则有无数个$\vec{x}$在变换后与$\vec{v}$重合；若$\vec{v}$没有被包含在列空间内，则不存在$\vec{x}$在变换之后与$\vec{v}$重合 $\iff$rank(A)=0，方程组可能有无穷解或零解</p>
+<h2 id='逆矩阵inverse-matrices'>
+    逆矩阵（Inverse matrices）
+    <a href='#%e9%80%86%e7%9f%a9%e9%98%b5inverse-matrices'><small data-pagefind-ignore>¶</small></a>
+</h2>
+<p>存在矩阵A，A的逆矩阵为$A^{-1}$，满足$AA^{-1}=I$  $I$ 称为恒等变换，即不做任何变换的变换。</p>
+<h2 id='列空间column-space'>
+    列空间（Column space）
+    <a href='#%e5%88%97%e7%a9%ba%e9%97%b4column-space'><small data-pagefind-ignore>¶</small></a>
+</h2>
+<p>所有变换后的向量的集合称为<strong>列空间</strong>，因为变换的矩阵的列指示了基向量变换后的位置，而列空间便是有变换后的基向量张成的。</p>
+<p>零向量一定被包含在列空间中。因为线性变换必须保持原点位置不变</p>
+<h2 id='秩rank'>
+    秩（Rank）
+    <a href='#%e7%a7%a9rank'><small data-pagefind-ignore>¶</small></a>
+</h2>
+<p><strong>秩</strong>代表了线性变换后空间的维数，更精确的说，是列空间的维数</p>
+<p>当秩达到最大值时，秩与列数相等，称之为<strong>满秩</strong>。</p>
+<h2 id='零空间null-space'>
+    零空间（Null space）
+    <a href='#%e9%9b%b6%e7%a9%ba%e9%97%b4null-space'><small data-pagefind-ignore>¶</small></a>
+</h2>
+<p>在满秩变换中，唯一能在变换后落在原点的只有零向量，而如果是非满秩变换，则会有一系列的向量会被压缩在原点，成为零向量。</p>
+<p>变换后落在原点的向量的集合被称为矩阵的<strong>零空间</strong>或者<strong>核</strong></p>
+<p>当线性方程组的$\vec{v}=0$时，零空间便是这个方程的解</p>
+<h1 id='非方矩阵作为维度之间的变换'>
+    非方矩阵作为维度之间的变换
+    <a href='#%e9%9d%9e%e6%96%b9%e7%9f%a9%e9%98%b5%e4%bd%9c%e4%b8%ba%e7%bb%b4%e5%ba%a6%e4%b9%8b%e9%97%b4%e7%9a%84%e5%8f%98%e6%8d%a2'><small data-pagefind-ignore>¶</small></a>
+</h1>
+<p>在做非方矩阵所代表的线性变换时，矩阵的列数表示了输入向量的维数，矩阵的行数则表示了输出向量的维数，故该线性变换会导致输入变量维数的变化。</p>
+<p>瘦高矩阵是把低维空间映射到高维的空间上。矮胖矩阵是把高维空间压缩到低维空间上。</p>
+<blockquote>
+<p>关于列满秩的概念和性质还是不是很懂</p></blockquote>
+<blockquote>
+<p>列满秩矩阵即该矩阵代表的线性变换会将原系下的基向量映射成一组线性无关的向量，故该向量能够作为新系下的一组基，所以该矩阵代表的线性变换并不会使空间坍缩</p></blockquote>
+<h1 id='点积和对偶性'>
+    点积和对偶性
+    <a href='#%e7%82%b9%e7%a7%af%e5%92%8c%e5%af%b9%e5%81%b6%e6%80%a7'><small data-pagefind-ignore>¶</small></a>
+</h1>
+<p>点积（dot product）是投影的一个很好的体现，也能够检验两个向量的指向是否相同</p>
+<p>两个向量点乘，就是将其中一个向量转化为代表线性变换的一个矩阵。</p>
+<p>向量有的时候可以看成是线性变换的物质载体</p>
+<p>对偶性（duality）可以说是两种数学事物之间自然而又出乎意料的对应关系
+对偶性的思想在于一个多维空间到数轴的线性变换与该空间的一个向量一一对应，即应用线性变换和与这个向量点乘等价</p>
+<blockquote>
+<p>感觉这节课内容的逻辑联系还没有完全找到，之后要花时间去重新理解</p></blockquote>
+<h1 id='叉积'>
+    叉积
+    <a href='#%e5%8f%89%e7%a7%af'><small data-pagefind-ignore>¶</small></a>
+</h1>
+<h2 id='standard-introduction'>
+    Standard introduction
+    <a href='#standard-introduction'><small data-pagefind-ignore>¶</small></a>
+</h2>
+<p>$\vec{v}\times\vec{w}$ 的绝对值等于以$\vec{v}$和$\vec{w}$向量为边长组成的平行四边形的面积，方向遵循右手定则</p>
+<p>叉积通过两个三维向量生成一个新的三维向量，且新的三维向量与原来的两个向量都垂直，方向遵循右手定则</p>
+<p>通过矩阵行列式计算叉积</p>
+<figure><img src="/images/20241209144555.png" width="600px">
+</figure>
+
+<h2 id='deeper-understanding'>
+    Deeper understanding
+    <a href='#deeper-understanding'><small data-pagefind-ignore>¶</small></a>
+</h2>
+<p>通过矩阵行列式计算叉积的方法是具有其几何意义的。叉积可以看作一个函数，输入两个向量，然后输出一个新的向量。我们可以定义一个从三维空间到数轴的线性变换，该线性变换只与$\vec{v}$和$\vec{w}$向量有关，那么我们可以通过矩阵乘法去描述这个线性变换，即存在一个$1\times3$的矩阵代表这个变换。而根据对偶性，我们可以将该矩阵立起来变成一个$3\times1$的向量$\vec{p}$，使得$\vec{p}$与任一向量(x,y,z)的点积等于一个$3\times3$的行列式，且该行列式的结果是以(x,y,z)、$\vec{v}$和$\vec{w}$构成的平行六面体的体积。</p>
+<figure><img src="/images/20241209151829.png">
+</figure>
+
+<p><em>那么，问题就变成了怎么样的$\vec{p}$能够满足上述性质</em>
+即该$\vec{p}$的长度等于$\vec{v}$和$\vec{w}$构成的平行四边形的面积，且方向垂直于$\vec{v}$和$\vec{w}$。此时，$\vec{p}$和(x,y,z)做点积就相当于得到(x,y,z)在$\vec{p}$上的投影向量的长度和$\vec{p}$的长度的乘积，得到的结果正好是行列式的结果——以(x,y,z)、$\vec{v}$和$\vec{w}$构成的平行六面体的体积。
+综上所述，我们通过$\vec{v}$和$\vec{w}$定义了一个函数（线性变换），而$\vec{p}$正代表了这个线性变换。这个定义的过程我们也可以看成是一个函数，那么该函数其实就是叉积。</p>
+<p><strong>于是我们只要求解$\vec{p}$的坐标就能够得出叉积的结果。引入i,j,k是作为一个符号，区分出p1,p2,p3的解，进而得出$\vec{p}$。</strong></p>
+<blockquote>
+<p>思考过程
+从叉积的定义下手，先找到叉积输出的向量的特点，之后从行列式一侧的角度去看，通过定义线性变换（一个点积的处理，即投影，且只与$\vec{v}$和$\vec{w}$有关），并通过对偶性将该线性变换对应到一个向量$\vec{p}$上，。通过等式可以得到向量$\vec{p}$正好符合叉积输出的向量的特点，因此形成闭环。
+这个叉积的过程就是一个从求平行六面体的体积出发，将其抽象成一个函数（或者成为线性变换），之后再通过对偶性抽象成一个向量的过程。</p></blockquote>
+<blockquote>
+<p>感觉这节课内容的逻辑联系还没有完全找到，之后要花时间去重新理解</p></blockquote>
+<h1 id='克拉默法则的几何解释'>
+    克拉默法则的几何解释
+    <a href='#%e5%85%8b%e6%8b%89%e9%bb%98%e6%b3%95%e5%88%99%e7%9a%84%e5%87%a0%e4%bd%95%e8%a7%a3%e9%87%8a'><small data-pagefind-ignore>¶</small></a>
+</h1>
+<p>一般的正交变换并不会保留点积，即向量的点积在进行变换之后会发生改变。</p>
+<p><strong>正交变换(Orthonormal-transformations)</strong> 是一种能够保留点积的变换。这种变换使基向量在变换后依然保持单位长度且相互垂直</p>
+<p>$A\vec{x}=\vec{v}$ 对于该线性方程组，易得$x_i=k_i\cdot\vec{x}$ ($k_i$为基向量)，即$\vec{x}$的每一个分量都可以由$\vec{x}$与对应的基向量的点积表示，而该点积又表示由$\vec{x}$与对应的基向量为邻边组成的平行四边形的面积Area。在进行了矩阵A代表的线性变换后，平行四边形的面积被缩放，缩放的倍数是det(A)，再次套用上述关系式，可得 $Area1=x_i^{&rsquo;}=k_i^{&rsquo;}\cdot\vec{v}$  ($k_i^{&rsquo;}$为线性变换后的基向量)。所以$Area\times det(A)=Area1$ ，即$x_i=\frac{x_i^{&rsquo;}}{det(A)}=\frac{det(D_i)}{det(A)}$ ，矩阵$D_i$为将矩阵A的第i列替换为$\vec{v}$的矩阵，$D_i$ 的几何意义是对第i个分量单独按照矩阵A作线性变换，$\det(D_{i})$ 代表了该线性变换对第i个基向量的缩放倍数，与$x_i=k_i\cdot\vec{x}$ 等价。如此便从几何上证明了Cramer法则以及揭示了Cramer法则的几何意义。</p>
+<blockquote>
+<p>本节中最重要的可以说是将分量巧妙的用对应基向量和未知向量构成的平行四边形的面积表示，而该面积又等于这两个向量的点积。如此我们通过线性变换中面积变化的比例来构建未知分量和变化后的未知分量（此时已知）的关系。</p></blockquote>
+<h1 id='基变换'>
+    基变换
+    <a href='#%e5%9f%ba%e5%8f%98%e6%8d%a2'><small data-pagefind-ignore>¶</small></a>
+</h1>
+<p>^1</p>
+<p>发生在向量与一组数之间的任意一种转化，都被称为一个坐标系</p>
+<p>不同坐标系的原点是相同的</p>
+<p>设坐标系1：$[\alpha_{1},\alpha_{2},\dots,\alpha_{n}]$，其坐标为x， 坐标系2：$[\beta_{1},\beta_{2},\dots,\beta_{n}]$，其坐标为y，A为1到2的过渡矩阵，对于基来说，该变换为
+$$
+[\beta_{1},\beta_{2},\dots,\beta_{n}]=[\alpha_{1},\alpha_{2},\dots,\alpha_{n}]A
+$$
+对于坐标（坐标默认为列向量）来说，该变换为
+$$
+x=Ay
+$$
+对于一个向量$\alpha$ ，存在以下基变换的关系
+$$
+\alpha=[\alpha_{1},\alpha_{2},\dots,\alpha_{n}]x=[\beta_{1},\beta_{2},\dots,\beta_{n}]y=[\alpha_{1},\alpha_{2},\dots,\alpha_{n}]Ay
+$$</p>
+<h2 id='向量在不同坐标系下的转换'>
+    向量在不同坐标系下的转换
+    <a href='#%e5%90%91%e9%87%8f%e5%9c%a8%e4%b8%8d%e5%90%8c%e5%9d%90%e6%a0%87%e7%b3%bb%e4%b8%8b%e7%9a%84%e8%bd%ac%e6%8d%a2'><small data-pagefind-ignore>¶</small></a>
+</h2>
+<p><em>如何在不同坐标系之间进行转换</em></p>
+<figure><img src="/images/3d822d9edf615f4a9d51cd8324e2b43.jpg">
+</figure>
+
+<p>设n维空间中有两个基 （1）$\vec{x}$（2）$\vec{y}$  由基（1）到基（2）的过渡矩阵为A，则有
+$$\vec{x}=A\vec{y}或\vec{y}=A^{-1}\vec{x} $$
+过渡矩阵A以基（1）下表示的基（2）的基向量为列向量构成。</p>
+<h2 id='代表线性变换的矩阵在不同坐标系下的转换'>
+    代表线性变换的矩阵在不同坐标系下的转换
+    <a href='#%e4%bb%a3%e8%a1%a8%e7%ba%bf%e6%80%a7%e5%8f%98%e6%8d%a2%e7%9a%84%e7%9f%a9%e9%98%b5%e5%9c%a8%e4%b8%8d%e5%90%8c%e5%9d%90%e6%a0%87%e7%b3%bb%e4%b8%8b%e7%9a%84%e8%bd%ac%e6%8d%a2'><small data-pagefind-ignore>¶</small></a>
+</h2>
+<p>设初始坐标系为O1，基向量为x，另一坐标系为O2，基向量为y，且存在过渡矩阵使得$\vec{x}=M\vec{y}$这样的关系成立</p>
+<p>在表示代表线性变换的矩阵时，一般的，我们是用O1坐标系下的坐标去跟踪O1坐标系下的基向量。设某一线性变换的矩阵为A，给出O2下的一向量v</p>
+<p>1、v左乘M，将v由O2下的语言转换成O1下的语言</p>
+<figure><img src="/images/20241209211706.png" width="100" height="100">
+</figure>
+
+<p>2 、继续左乘A，将O1下的v进行A（在O1体系下描述）代表的线性变换</p>
+<figure><img src="/images/20241209211748.png" width="100" height="100">
+</figure>
+
+<p>3、继续左乘$M^{-1}$，将线性变换后O1语言描述的v翻译成由O2语言描述</p>
+<figure><img src="/images/20241209212329.png">
+</figure>
+
+<p>最终得到的向量$M^{-1}AM\vec{v}$即为O2体系下对v进行与O1体系下描述的矩阵A代表的线性变换等效的线性变换后的向量。</p>
+<p>$M^{-1}AM$暗示着一中数学上的转移作用，其中A代表当前视角下的一个变换，A两侧的矩阵代表着转移作用，即视角上的转换。最后的乘积仍然代表着同一种变换，只是描述的视角发生了改变<del>这不就是相似吗</del></p>
+<h1 id='特征向量与特征值'>
+    特征向量与特征值
+    <a href='#%e7%89%b9%e5%be%81%e5%90%91%e9%87%8f%e4%b8%8e%e7%89%b9%e5%be%81%e5%80%bc'><small data-pagefind-ignore>¶</small></a>
+</h1>
+<p>给出矩阵A，如果存在复数$\lambda$和非零向量$\vec{x}$，满足$$A\vec{x}=\lambda\vec{x}$$
+则$\lambda$称为矩阵A的一个特征值，$\vec{x}$称为A对应与特征值$\lambda$的特征向量。</p>
+<p>从其几何意义上来说，对空间进行A所代表的线性变换后，存在向量在变换后仍然留在他们变换前张成的空间里，只是发生了一定比例的伸缩，该比例被称为特征值$\lambda$，满足上述条件的向量被称为特征向量$\vec{x}$。即A代表的线性变换对特征向量的作用只是使他们发生了伸缩，而没有发生旋转。而根据线性性质，某一特征向量的列空间中的所有向量也是特征向量。每个特征向量都和特征值一一对应。</p>
+<p>考虑三维空间中的特征向量和特征值，如果找到了线性变换的矩阵A的特征向量，该特征向量即为线性变换的旋转轴。</p>
+<p>为了求解特征向量和特征值，对上式进行一定的处理，变为$$(A-\lambda I)\vec{x}=0$$
+由于$\vec{x}$为非零向量，所以当且仅当矩阵$A-\lambda I$代表的线性变换会将空间压缩至更低的维度时，$\vec{x}$才会有解。即$det(A-\lambda I)=0$。满足上式的$\lambda$即为特征值。</p>
+<p>当特征值为虚数时，这往往代表了对应的线性变换是旋转。</p>
+<p>如果在某个线性变换中，基向量都是特征向量，则该线性变换的矩阵为对角阵，且对角线上的元素分别为基向量的特征值</p>
+<p>对角矩阵的乘法非常简单，即让基向量与某个特征值相乘。所以对角矩阵的高次幂非常好求</p>
+<p>当某线性变换的所有特征向量能够张成整个线性空间时，我们就可以通过[[#^1|基变换]]使得基向量都是特征向量，此时，在新的坐标系视角下的线性变换的矩阵就变成了对角阵，且对角元为对应的特征值。（即正角相似对角化）这是因为新坐标系下的基向量在变换中只进行了缩放</p>
+<p>不是所有的线性变换的矩阵都能正交相似对角化。n阶矩阵A能够正交相似对角化的充要条件是A有n个线性无关的特征向量。几何上来说，就是只有A的所有特征向量能够张成全空间，这些向量才能作为空间的基向量。</p>
+<h1 id='抽象线性空间'>
+    抽象线性空间
+    <a href='#%e6%8a%bd%e8%b1%a1%e7%ba%bf%e6%80%a7%e7%a9%ba%e9%97%b4'><small data-pagefind-ignore>¶</small></a>
+</h1>
+<p>满足<strong>可加性</strong>和<strong>成比例</strong>这两条性质的变换是线性变换。</p>
+<p>求导是线性运算</p>
+<p><strong>线性空间的八条公理</strong>
+<figure><img src="/images/20241209225917.png">
+</figure>
+</p>
+<p>这些公理发挥着媒介的作用，即任何的向量空间，如果满足上述八条公理，即可应用线性代数的所有结论</p>
+<p>抽象向量的形式并不重要，只要其加法和数乘满足上述公理即可。</p>
+<p>向量空间是个高度抽象的概念。</p>
+<blockquote>
+<p>Abstractness is the price of genrality.
+普适的代价是抽象。</p></blockquote>
+<p><em>善于运用直观思维。</em></p>
+
+            
+            
+            
+            
+            
+            
+            <p></p><p></p><p></p><p></p>
+        </article>
+        
+        
+        
+        
+
+    
+
+        
+
+    
+
+    
+
+
+
+    </div>
+    
+
+    </div>
+
+    
+    
+    
+        <aside data-pagefind-ignore class='toc' id='toc'>
+            <button class='toc_title'>Contents</button>
+            <div class='toc_content'>
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#向量">向量</a>
+      <ul>
+        <li><a href="#向量的数乘">向量的数乘</a></li>
+      </ul>
+    </li>
+    <li><a href="#线性组合跨度和基向量">线性组合、跨度和基向量</a></li>
+    <li><a href="#线性变换和矩阵">线性变换和矩阵</a></li>
+    <li><a href="#矩阵乘法">矩阵乘法</a></li>
+    <li><a href="#行列式">行列式</a></li>
+    <li><a href="#逆矩阵列空间秩和零空间">逆矩阵、列空间、秩和零空间</a>
+      <ul>
+        <li><a href="#逆矩阵inverse-matrices">逆矩阵（Inverse matrices）</a></li>
+        <li><a href="#列空间column-space">列空间（Column space）</a></li>
+        <li><a href="#秩rank">秩（Rank）</a></li>
+        <li><a href="#零空间null-space">零空间（Null space）</a></li>
+      </ul>
+    </li>
+    <li><a href="#非方矩阵作为维度之间的变换">非方矩阵作为维度之间的变换</a></li>
+    <li><a href="#点积和对偶性">点积和对偶性</a></li>
+    <li><a href="#叉积">叉积</a>
+      <ul>
+        <li><a href="#standard-introduction">Standard introduction</a></li>
+        <li><a href="#deeper-understanding">Deeper understanding</a></li>
+      </ul>
+    </li>
+    <li><a href="#克拉默法则的几何解释">克拉默法则的几何解释</a></li>
+    <li><a href="#基变换">基变换</a>
+      <ul>
+        <li><a href="#向量在不同坐标系下的转换">向量在不同坐标系下的转换</a></li>
+        <li><a href="#代表线性变换的矩阵在不同坐标系下的转换">代表线性变换的矩阵在不同坐标系下的转换</a></li>
+      </ul>
+    </li>
+    <li><a href="#特征向量与特征值">特征向量与特征值</a></li>
+    <li><a href="#抽象线性空间">抽象线性空间</a></li>
+  </ul>
+</nav>
+            </div>
+        </aside>
+    
+
+</div>
+
+
+<template id='search-zone-template'>
+    
+    <div class='' id='search-zone'>
+        
+        <div class='search_bar'>
+            
+            <input type='search'
+                id='search-input-box'
+                class='search_bar_search-box'
+                placeholder='Search…'
+                autocomplete='off'>
+
+            
+            <div class='search_bar_close-sign' onclick='closeSearch(this)'>
+                
+                <div class='close-sign'></div>
+            </div>
+        </div>
+
+        
+        <div class='search_results'></div>
+    </div>
+</template>
+
+
+<template id='search-result'>
+    <div class='search_results_item'>
+        <div class='search_results_item_title'></div>
+        <div class='search_results_item_content'></div>
+        <div class='search_results_item_tags'>
+            <div class='search_results_item_tags_date'></div>
+            <div class='search_results_item_tags_sections'></div>
+        </div>
+    </div>
+</template>
+
+
+
+
+<script src='/js/main.07644855453ea3563fc25b36d91f32b4aa952cd60ebafb6fad77cf9c74baea47.js'></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {
+    delimiters: [
+      {left: '$$', right: '$$', display: true},
+      {left: '$', right: '$', display: false}
+    ]
+  });">
+</script>
+
+</body>
+</html>
