@@ -1,6 +1,8 @@
 +++
-title =  "主页"
-description = "欢迎来到我的博客，这里记录了我的学习与生活点滴。"
+[menu.main]
+    identifier = "home"
+    name = "🏠 首页"
+    weight = 1
 +++
 
 # 欢迎来到我的博客

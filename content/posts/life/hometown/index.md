@@ -3,6 +3,8 @@ date = '2025-06-26T16:22:05+08:00'
 draft = false
 summary = '简要介绍作者的家乡~'
 title = 'Hometown'
+column = 'life'
+section = 'life'
 +++
 
 # 总述

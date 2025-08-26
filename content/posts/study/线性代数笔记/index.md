@@ -4,7 +4,8 @@ draft = false
 title = '线性代数笔记'
 summary = '本文简要的整理了作者学习线性代数的笔记'
 math = true
-
+section = 'study'
+column = 'study'
 +++
 
 

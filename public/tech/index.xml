@@ -16,9 +16,13 @@
             
         
     
+        
+            
+        
+    
  | pzzの博客</title>
-        <link>/categories/</link>
-        <atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+        <link>/tech/</link>
+        <atom:link href="/tech/index.xml" rel="self" type="application/rss+xml" />
         <description>
             Recent Content | 
     
@@ -28,6 +32,10 @@
                 
             
                 
+            
+        
+    
+        
             
         
     
@@ -45,6 +53,10 @@
         
         
         
+            <lastBuildDate>
+                Wed, 26 Mar 2025 16:51:19 CST
+            </lastBuildDate>
+        
         
         
     
@@ -54,6 +66,10 @@
                 
             
                 
+            
+        
+    
+        
             
         
     
