@@ -9,7 +9,7 @@ date = 2025-08-26
 [menu.main]
     identifier = "about"
     name = "👤 关于"
-    weight = 2
+    weight = 3
 +++
 
 # 关于我

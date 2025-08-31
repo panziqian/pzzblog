@@ -364,6 +364,26 @@ $$\vec{x}=A\vec{y}或\vec{y}=A^{-1}\vec{x} $$
 </description>
         </item>
     
+        <item>
+            <title>看过的番剧</title>
+            <link>/record/film/</link>
+            <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+            
+            <guid isPermaLink="false">/record/film/</guid>
+            <description>&lt;p&gt;这些是我看过的番剧。&lt;/p&gt;
+</description>
+        </item>
+    
+        <item>
+            <title>看过的书</title>
+            <link>/record/book/</link>
+            <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+            
+            <guid isPermaLink="false">/record/book/</guid>
+            <description>&lt;p&gt;这些是我读过的书。&lt;/p&gt;
+</description>
+        </item>
+    
 
     </channel>
 </rss> 
