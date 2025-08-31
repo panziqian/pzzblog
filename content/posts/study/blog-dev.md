@@ -4,8 +4,6 @@ date: 2025-08-31
 summary: 博客更新及修改日志
 column: study
 section: study
-
-draft: true
 ---
 
 # 2025-08-31
