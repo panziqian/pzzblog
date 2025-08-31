@@ -66,7 +66,7 @@
         
         
             <lastBuildDate>
-                Wed, 26 Mar 2025 16:51:19 CST
+                Sun, 31 Aug 2025 00:00:00 UTC
             </lastBuildDate>
         
         
@@ -76,6 +76,23 @@
         
             
                 
+                    
+                        <item>
+                            <title>博客更新日志</title>
+                            <link>/posts/study/blog-dev/</link>
+                            <pubDate>Sun, 31 Aug 2025 00:00:00 UTC</pubDate>
+                            
+                            <guid isPermaLink="false">/posts/study/blog-dev/</guid>
+                            <description>&lt;h1&gt;2025-08-31&lt;/h1&gt;
+&lt;p&gt;更新记录板块，用于记录我看过的书籍以及番剧、电影等。主要参考了现使用的hugo主题作者的&lt;a href=&#39;https://zerovip.github.io/zh/82988/&#39;
+    
+    
+        target=&#39;_blank&#39; rel=&#39;noreferrer noopener&#39;
+    
+&gt;一篇文章&lt;b&gt;&lt;sub&gt;⧉&lt;/sub&gt;&lt;/b&gt;&lt;/a&gt;。
+此外博客之后的博文的&lt;code&gt;front matter&lt;/code&gt;转为使用&lt;code&gt;yaml&lt;/code&gt;格式书写。&lt;/p&gt;
+</description>
+                        </item>
                     
                         <item>
                             <title>线性代数笔记</title>
