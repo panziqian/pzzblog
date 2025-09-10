@@ -5,6 +5,7 @@ discription = 'About Page'
 draft = false
 list_hide = true
 date = 2025-08-26
+autoNumberHeadings = false
 
 [menu.main]
     identifier = "about"

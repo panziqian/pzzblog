@@ -4,7 +4,14 @@ date: 2025-08-31
 summary: 博客更新及修改日志
 column: study
 section: study
+autoNumberHeadings: false
 ---
+
+# 2025-09-04
+
+调整正文标题中自动标序号的功能。
+
+
 
 # 2025-08-31
 

@@ -1,6 +1,7 @@
 ---
 title: 看过的书
 list_hide: true
+section: record
 menu:
     main:
         identifier: book

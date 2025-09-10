@@ -1,6 +1,7 @@
 +++
 title = "看过的番剧"
 list_hide = true
+section = "record"
 [menu.main]
     identifier = "film"
     title = "看过的番剧"

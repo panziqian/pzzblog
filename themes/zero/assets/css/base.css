@@ -649,22 +649,22 @@ strong span{
 }
 
 /* 下面是标题计数器 */
-.right_main_article{
+.heading-num.right_main_article{
     counter-reset: h1counter;
 }
-.right_main_article h1{
+.heading-num.right_main_article h1{
     counter-reset: h2counter;
 }
-.right_main_article h2{
+.heading-num.right_main_article h2{
     counter-reset: h3counter;
 }
-.right_main_article h3{
+.heading-num.right_main_article h3{
     counter-reset: h4counter;
 }
-.right_main_article h4{
+.heading-num.right_main_article h4{
     counter-reset: h5counter;
 }
-.right_main_article h5{
+.heading-num.right_main_article h5{
     counter-reset: h6counter;
 }
 /* .right_main_article h6{ */
@@ -672,29 +672,29 @@ strong span{
 /* } */
 /* 上面是标题计数器 */
 /* 下面是文章标题计数显示 */
-.right_main_article h1:before {
+.heading-num.right_main_article h1:before {
     counter-increment: h1counter;
     content: counter(h1counter) ".\0000a0\0000a0";
 }
-.right_main_article h2:before {
+.heading-num.right_main_article h2:before {
     counter-increment: h2counter;
     content: counter(h1counter) "."
         counter(h2counter) ".\0000a0\0000a0";
 }
-.right_main_article h3:before {
+.heading-num.right_main_article h3:before {
     counter-increment: h3counter;
     content: counter(h1counter) "."
         counter(h2counter) "."
         counter(h3counter) ".\0000a0\0000a0";
 }
-.right_main_article h4:before {
+.heading-num.right_main_article h4:before {
     counter-increment: h4counter;
     content: counter(h1counter) "."
         counter(h2counter) "."
         counter(h3counter) "."
         counter(h4counter) ".\0000a0\0000a0";
 }
-.right_main_article h5:before {
+.heading-num.right_main_article h5:before {
     counter-increment: h5counter;
     content: counter(h1counter) "."
         counter(h2counter) "."
@@ -702,7 +702,7 @@ strong span{
         counter(h4counter) "."
         counter(h5counter) ".\0000a0\0000a0";
 }
-.right_main_article h6:before {
+.heading-num.right_main_article h6:before {
     counter-increment: h6counter;
     content: counter(h1counter) "."
         counter(h2counter) "."

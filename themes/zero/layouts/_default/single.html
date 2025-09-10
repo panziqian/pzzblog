@@ -27,7 +27,7 @@
 
 {{ define "right_main" }}
     <div class="right_main">
-        <article class="right_main_article">
+        <article class="right_main_article {{ if not (eq .Params.autoNumberHeadings false) }}heading-num{{ end }}">
             <!-- <div class="entry heti"> -->
             {{ .Content }}
             <!-- </div> -->
