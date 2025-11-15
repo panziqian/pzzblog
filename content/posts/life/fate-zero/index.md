@@ -4,7 +4,7 @@ title: fate/zero观后感
 section: life
 column: life
 summary: 主播看完fate/zero之后的一些小感想
-draft: true
+draft: false
 ---
 
 其实很久以前就听闻了fate的大名，但是中学时期时间不是很多，看到fate系列那么多，我又是那种一旦要看就要全部看完的人（其实也没有那么夸张了了hh，现在看完zero和UWB线之后就想停手了），于是就一直没有去补。不过上网冲浪的过程中一直会刷到呆毛王的图，呆毛王真的好帅啊😭。终于，在看了泛式的新番时光机里又提到了fate/zero之后我终于忍不住补了这部番。
