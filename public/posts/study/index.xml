@@ -83,7 +83,9 @@
                             <pubDate>Sun, 31 Aug 2025 00:00:00 UTC</pubDate>
                             
                             <guid isPermaLink="false">/posts/study/blog-dev/</guid>
-                            <description>&lt;h1&gt;2025-08-31&lt;/h1&gt;
+                            <description>&lt;h1&gt;2025-09-04&lt;/h1&gt;
+&lt;p&gt;调整正文标题中自动标序号的功能。&lt;/p&gt;
+&lt;h1&gt;2025-08-31&lt;/h1&gt;
 &lt;p&gt;更新记录板块，用于记录我看过的书籍以及番剧、电影等。主要参考了现使用的hugo主题作者的&lt;a href=&#39;https://zerovip.github.io/zh/82988/&#39;
     
     
@@ -101,12 +103,15 @@
                             
                             <guid isPermaLink="false">/posts/study/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%94%E8%AE%B0/</guid>
                             <description>&lt;blockquote&gt;
-&lt;p&gt;本文的latex数学公式无法正常显示 (已修复)&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;本文的latex数学公式无法正常显示 (已修复)&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;目前本文的附件图片尚未上传，无法正常显示(已修复)&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;目前本文的附件图片尚未上传，无法正常显示(已修复)&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;blockquote&gt;
-&lt;p&gt;A major application of linear algebra is to solving systems of linear equations&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;A major application of linear algebra is to solving systems of linear equations&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;”线性代数的本质“课程
 bilibili &lt;a href=&#39;https://www.bilibili.com/video/BV1ys411472E?spm_id_from=333.788.videopod.episodes&amp;amp;vd_source=e01b4a397639696962e464553130827c&#39;
     
@@ -151,12 +156,14 @@ youtube &lt;a href=&#39;https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3Miz
 &lt;p&gt;我们能够通过基向量的线性变换来表示整个空间的线性变换。这样做的依据是一个线性组合在线性变换后仍保持该线性组合。这条性质的来源是线性变换具有保线性。&lt;/p&gt;
 &lt;p&gt;对于一个代表线性变换的矩阵，其列向量即为对应的变换后的基向量。若给出一个向量，想知道对这个向量施以某线性变换得到的向量，只需要将该线性变换的矩阵左乘该向量（即将该向量的坐标与矩阵对应列向量相乘，最后得到的新列向量相加），就能得到结果。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;如果每一个矩阵都代表一个线性变换，那么对矩阵转置的话，该线性变换会发生什么变化呢&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;如果每一个矩阵都代表一个线性变换，那么对矩阵转置的话，该线性变换会发生什么变化呢&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h1&gt;矩阵乘法&lt;/h1&gt;
 &lt;p&gt;矩阵的乘法可以看作是多次线性变换的复合&lt;/p&gt;
 &lt;p&gt;矩阵乘积的效果需要从右往左去应用，这也揭示了矩阵乘法没有交换律，也揭示了矩阵乘法具有结合律&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;多用分块矩阵的思想去思考矩阵乘法的过程&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;多用分块矩阵的思想去思考矩阵乘法的过程&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h1&gt;行列式&lt;/h1&gt;
 &lt;p&gt;对于一个方格的面积的变换适用于所有其他大小的方格
 一个矩阵的行列式的绝对值即为线性变换改变面积的比例
@@ -182,9 +189,11 @@ youtube &lt;a href=&#39;https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3Miz
 &lt;p&gt;在做非方矩阵所代表的线性变换时，矩阵的列数表示了输入向量的维数，矩阵的行数则表示了输出向量的维数，故该线性变换会导致输入变量维数的变化。&lt;/p&gt;
 &lt;p&gt;瘦高矩阵是把低维空间映射到高维的空间上。矮胖矩阵是把高维空间压缩到低维空间上。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;关于列满秩的概念和性质还是不是很懂&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;关于列满秩的概念和性质还是不是很懂&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;列满秩矩阵即该矩阵代表的线性变换会将原系下的基向量映射成一组线性无关的向量，故该向量能够作为新系下的一组基，所以该矩阵代表的线性变换并不会使空间坍缩&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;列满秩矩阵即该矩阵代表的线性变换会将原系下的基向量映射成一组线性无关的向量，故该向量能够作为新系下的一组基，所以该矩阵代表的线性变换并不会使空间坍缩&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h1&gt;点积和对偶性&lt;/h1&gt;
 &lt;p&gt;点积（dot product）是投影的一个很好的体现，也能够检验两个向量的指向是否相同&lt;/p&gt;
 &lt;p&gt;两个向量点乘，就是将其中一个向量转化为代表线性变换的一个矩阵。&lt;/p&gt;
@@ -192,7 +201,8 @@ youtube &lt;a href=&#39;https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3Miz
 &lt;p&gt;对偶性（duality）可以说是两种数学事物之间自然而又出乎意料的对应关系
 对偶性的思想在于一个多维空间到数轴的线性变换与该空间的一个向量一一对应，即应用线性变换和与这个向量点乘等价&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;感觉这节课内容的逻辑联系还没有完全找到，之后要花时间去重新理解&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;感觉这节课内容的逻辑联系还没有完全找到，之后要花时间去重新理解&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h1&gt;叉积&lt;/h1&gt;
 &lt;h2&gt;Standard introduction&lt;/h2&gt;
 &lt;p&gt;$\vec{v}\times\vec{w}$ 的绝对值等于以$\vec{v}$和$\vec{w}$向量为边长组成的平行四边形的面积，方向遵循右手定则&lt;/p&gt;
@@ -213,15 +223,18 @@ youtube &lt;a href=&#39;https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3Miz
 &lt;blockquote&gt;
 &lt;p&gt;思考过程
 从叉积的定义下手，先找到叉积输出的向量的特点，之后从行列式一侧的角度去看，通过定义线性变换（一个点积的处理，即投影，且只与$\vec{v}$和$\vec{w}$有关），并通过对偶性将该线性变换对应到一个向量$\vec{p}$上，。通过等式可以得到向量$\vec{p}$正好符合叉积输出的向量的特点，因此形成闭环。
-这个叉积的过程就是一个从求平行六面体的体积出发，将其抽象成一个函数（或者成为线性变换），之后再通过对偶性抽象成一个向量的过程。&lt;/p&gt;&lt;/blockquote&gt;
+这个叉积的过程就是一个从求平行六面体的体积出发，将其抽象成一个函数（或者成为线性变换），之后再通过对偶性抽象成一个向量的过程。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;感觉这节课内容的逻辑联系还没有完全找到，之后要花时间去重新理解&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;感觉这节课内容的逻辑联系还没有完全找到，之后要花时间去重新理解&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h1&gt;克拉默法则的几何解释&lt;/h1&gt;
 &lt;p&gt;一般的正交变换并不会保留点积，即向量的点积在进行变换之后会发生改变。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;正交变换(Orthonormal-transformations)&lt;/strong&gt; 是一种能够保留点积的变换。这种变换使基向量在变换后依然保持单位长度且相互垂直&lt;/p&gt;
 &lt;p&gt;$A\vec{x}=\vec{v}$ 对于该线性方程组，易得$x_i=k_i\cdot\vec{x}$ ($k_i$为基向量)，即$\vec{x}$的每一个分量都可以由$\vec{x}$与对应的基向量的点积表示，而该点积又表示由$\vec{x}$与对应的基向量为邻边组成的平行四边形的面积Area。在进行了矩阵A代表的线性变换后，平行四边形的面积被缩放，缩放的倍数是det(A)，再次套用上述关系式，可得 $Area1=x_i^{&amp;rsquo;}=k_i^{&amp;rsquo;}\cdot\vec{v}$  ($k_i^{&amp;rsquo;}$为线性变换后的基向量)。所以$Area\times det(A)=Area1$ ，即$x_i=\frac{x_i^{&amp;rsquo;}}{det(A)}=\frac{det(D_i)}{det(A)}$ ，矩阵$D_i$为将矩阵A的第i列替换为$\vec{v}$的矩阵，$D_i$ 的几何意义是对第i个分量单独按照矩阵A作线性变换，$\det(D_{i})$ 代表了该线性变换对第i个基向量的缩放倍数，与$x_i=k_i\cdot\vec{x}$ 等价。如此便从几何上证明了Cramer法则以及揭示了Cramer法则的几何意义。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;本节中最重要的可以说是将分量巧妙的用对应基向量和未知向量构成的平行四边形的面积表示，而该面积又等于这两个向量的点积。如此我们通过线性变换中面积变化的比例来构建未知分量和变化后的未知分量（此时已知）的关系。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;本节中最重要的可以说是将分量巧妙的用对应基向量和未知向量构成的平行四边形的面积表示，而该面积又等于这两个向量的点积。如此我们通过线性变换中面积变化的比例来构建未知分量和变化后的未知分量（此时已知）的关系。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h1&gt;基变换&lt;/h1&gt;
 &lt;p&gt;^1&lt;/p&gt;
 &lt;p&gt;发生在向量与一组数之间的任意一种转化，都被称为一个坐标系&lt;/p&gt;
@@ -287,7 +300,8 @@ $$\vec{x}=A\vec{y}或\vec{y}=A^{-1}\vec{x} $$
 &lt;p&gt;向量空间是个高度抽象的概念。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Abstractness is the price of genrality.
-普适的代价是抽象。&lt;/p&gt;&lt;/blockquote&gt;
+普适的代价是抽象。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;&lt;em&gt;善于运用直观思维。&lt;/em&gt;&lt;/p&gt;
 </description>
                         </item>

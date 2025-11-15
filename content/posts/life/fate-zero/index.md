@@ -3,6 +3,7 @@ date: 2025-09-03
 title: fate/zero观后感
 section: life
 column: life
+summary: 主播看完fate/zero之后的一些小感想
 draft: true
 ---
 
