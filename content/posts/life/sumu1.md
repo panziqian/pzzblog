@@ -1,11 +1,11 @@
 ---
 
-date='2025-08-27'
-title='大一之终末，大二之伊始'
-summary='作者对大一的总结以及对大二的展望'
-column='life'
-section='life'
-draft=true
+date: '2025-08-27'
+title: '大一之终末，大二之伊始'
+summary: '作者对大一的总结以及对大二的展望'
+column: 'life'
+section: 'life'
+draft: true
 
 ---
 
