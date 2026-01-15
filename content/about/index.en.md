@@ -12,4 +12,14 @@ date = 2025-08-26
     weight = 2
 +++
 
-Developing...
+# About me
+
+- **Education**
+  - **2024-present**: Xi'an Jiaotong University majoring in computer science
+- **Interest**
+  - Anime
+  - JPOP
+- **Contact**
+  - **Email**: pzqpzq@stu.xjtu.edu.cn
+
+I am a student of Xi'an Jiaotong University majoring in computer science. Curently finding researching interest.
