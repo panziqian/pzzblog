@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
+        
+        
         <title>
     
     
@@ -73,6 +75,8 @@
         
     
     
+    
+    
         
             
                 
@@ -84,7 +88,7 @@
                             
                             <guid isPermaLink="false">/posts/study/vscode-ext-fix/</guid>
                             <description>&lt;h1&gt;正文&lt;/h1&gt;
-&lt;p&gt;事情的起因是笔者在上早八时打开了vscode并将其更新到了最新的版本，即 &lt;a href=&#39;https://code.visualstudio.com/updates/v1_111&#39;
+&lt;p&gt;事情的起因是笔者在上早八时打开了 vscode 并将其更新到了最新的版本，即 &lt;a href=&#39;https://code.visualstudio.com/updates/v1_111&#39;
     
     
         target=&#39;_blank&#39; rel=&#39;noreferrer noopener&#39;
@@ -110,11 +114,11 @@ at FSReqCallback.wrapper [as oncomplete] (node:fs:671:5)&lt;/p&gt;
         target=&#39;_blank&#39; rel=&#39;noreferrer noopener&#39;
     
 &gt;之前的版本&lt;b&gt;&lt;sub&gt;⧉&lt;/sub&gt;&lt;/b&gt;&lt;/a&gt;等的方法，均没有奏效。这时笔者做出了很不理智的决定——将插件文件夹及其缓存在没有备份的情况下都删除了。然而这并没有解决问题，反而让笔者无法重新找到并安装之前的插件了。（血泪教训：执行&lt;code&gt;rm -rf&lt;/code&gt;的之前一定要三思，对重要文件进行备份！！这也促使笔者在之后去对配置文件进行安全的备份。）&lt;/p&gt;
-&lt;p&gt;之后在对网络的排查时却无意发现找到了问题的突破口。笔者通过 &lt;code&gt;file&lt;/code&gt; 命令对下载下来的 &lt;code&gt;.visx&lt;/code&gt; 文件进行类型检查时其输出为 &lt;code&gt;test.vsix: gzip compressed data, max speed, from FAT filesystem (MS-DOS, OS/2, NT), original size modulo 2^32 9404289&lt;/code&gt;。 GPT 通过这条输出找到了问题的真正原因。vscode 的插件格式应该为 &lt;code&gt;Zip archive data&lt;/code&gt; 而不应该是 &lt;code&gt;gzip compressed data&lt;/code&gt;。因为 ZIP 文件的 EOCD(End of central directory)结构被 gzip 包了一层，vscode 的 ZIP 解析器无法识别，最终导致了插件安装失败。GPT 也给出了被 gzip 压缩的可能原因。&lt;/p&gt;
+&lt;p&gt;之后在对网络的排查时却无意发现找到了问题的突破口。笔者通过 &lt;code&gt;file&lt;/code&gt; 命令对下载下来的 &lt;code&gt;.visx&lt;/code&gt; 文件进行类型检查时其输出为 &lt;code&gt;test.vsix: gzip compressed data, max speed, from FAT filesystem (MS-DOS, OS/2, NT), original size modulo 2^32 9404289&lt;/code&gt;。 GPT 通过这条输出找到了问题的真正原因。vscode 的插件格式应该为 &lt;code&gt;Zip archive data&lt;/code&gt; 而不应该是 &lt;code&gt;gzip compressed data&lt;/code&gt;。因为 ZIP 文件的 EOCD(End of central directory) 结构被 gzip 包了一层，vscode 的 ZIP 解析器无法识别，最终导致了插件安装失败。GPT 也给出了被 gzip 压缩的可能原因。&lt;/p&gt;
 &lt;p&gt;笔者开启了 VPN 代理， 此时 HTTP 传输的请求头可能被改写，强制增加了 gzip 支持，导致 ZIP 文件被 gzip 再次封装。另一个可能是代理重新进行了压缩响应，使用 gzip 对 ZIP 文件进行了压缩。而 vscode 期望的是 ZIP 文件，不能正确识别 gzip 压缩的文件，故报错，造成插件安装失败。&lt;/p&gt;
 &lt;h1&gt;备份&lt;/h1&gt;
 &lt;p&gt;在这一部分中，笔者会简单列出备份 vscode 插件的命令，可能在日后会单开一篇博客介绍配置的备份。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;code --list-extensions &amp;gt; vscode-extensions.txt
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;code --list-extensions &amp;gt; vscode-extensions.txt
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;通过这行命令能够将 vscode 中已安装插件的列表导出至 &lt;code&gt;txt&lt;/code&gt; 文件中。之后可以通过这行命令重新安装列表中的插件。&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cat vscode-extensions.txt | xargs -n 1 code --install-extension
 &lt;/code&gt;&lt;/pre&gt;</description>

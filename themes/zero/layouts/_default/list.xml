@@ -15,6 +15,8 @@
 
 {{ define "rss_main" }}
     {{ $currentNode := . }}
+    {{ $authorEmail := or .Site.Params.email .Site.Params.author_email }}
+    {{ $authorName := or .Site.Params.author .Site.Params.author_name }}
     {{ range .Site.Menus.main }}
         {{ if ($currentNode.IsMenuCurrent "main" .) }}
             {{ range first 10 (where (where (where $currentNode.Site.Pages "Section" (path.Base .URL)) "Title" "ne" "") ".Params.rss_hide" "ne" true) }}
@@ -22,8 +24,8 @@
                     <title>{{ .Title }}</title>
                     <link>{{ .Param "baseURL" }}{{ .RelPermalink }}</link>
                     <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 MST" | safeHTML }}</pubDate>
-                    {{ with .Site.Author.email }}
-                        <author>{{ . }}{{ with $.Site.Author.name }} ({{ . }}){{ end }}</author>
+                    {{ with $authorEmail }}
+                        <author>{{ . }}{{ with $authorName }} ({{ . }}){{ end }}</author>
                     {{end}}
                     <guid isPermaLink="false">{{ .RelPermalink }}</guid>
                     <description>{{ .Content | html }}</description>
@@ -37,8 +39,8 @@
                             <title>{{ .Title }}</title>
                             <link>{{ .Param "baseURL" }}{{ .RelPermalink }}</link>
                             <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 MST" | safeHTML }}</pubDate>
-                            {{ with .Site.Author.email }}
-                                <author>{{ . }}{{ with $.Site.Author.name }} ({{ . }}){{ end }}</author>
+                            {{ with $authorEmail }}
+                                <author>{{ . }}{{ with $authorName }} ({{ . }}){{ end }}</author>
                             {{end}}
                             <guid isPermaLink="false">{{ .RelPermalink }}</guid>
                             <description>{{ .Content | html }}</description>

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
+        
+        
         <title>
     RSS 订阅
  | pzzの博客</title>
@@ -25,6 +27,8 @@
         
         
         
+    
+    
     
         <item>
             <title>vscode插件安装失败问题的修复</title>
@@ -63,7 +67,7 @@ at FSReqCallback.wrapper [as oncomplete] (node:fs:671:5)&lt;/p&gt;
 &lt;p&gt;笔者开启了 VPN 代理， 此时 HTTP 传输的请求头可能被改写，强制增加了 gzip 支持，导致 ZIP 文件被 gzip 再次封装。另一个可能是代理重新进行了压缩响应，使用 gzip 对 ZIP 文件进行了压缩。而 vscode 期望的是 ZIP 文件，不能正确识别 gzip 压缩的文件，故报错，造成插件安装失败。&lt;/p&gt;
 &lt;h1&gt;备份&lt;/h1&gt;
 &lt;p&gt;在这一部分中，笔者会简单列出备份 vscode 插件的命令，可能在日后会单开一篇博客介绍配置的备份。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;code --list-extensions &amp;gt; vscode-extensions.txt
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;code --list-extensions &amp;gt; vscode-extensions.txt
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;通过这行命令能够将 vscode 中已安装插件的列表导出至 &lt;code&gt;txt&lt;/code&gt; 文件中。之后可以通过这行命令重新安装列表中的插件。&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cat vscode-extensions.txt | xargs -n 1 code --install-extension
 &lt;/code&gt;&lt;/pre&gt;</description>

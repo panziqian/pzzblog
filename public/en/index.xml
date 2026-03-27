@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
+        
+        
         <title>
     RSS feed
  | pzzの博客</title>
@@ -25,6 +27,8 @@
         
         
         
+    
+    
     
         <item>
             <title>About</title>

@@ -1,6 +1,8 @@
 {{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\" ?>" | safeHTML }}
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
+        {{ $authorEmail := or .Site.Params.email .Site.Params.author_email }}
+        {{ $authorName := or .Site.Params.author .Site.Params.author_name }}
         <title>{{ block "rss_title" . }}{{ end }} | {{ .Site.Title }}</title>
         <link>{{ .Param "baseURL" }}{{ .RelPermalink }}</link>
         <atom:link href="{{ .Param "baseURL" }}{{ .RelPermalink }}index.xml" rel="self" type="application/rss+xml" />
@@ -11,14 +13,14 @@
         {{ with .Site.LanguageCode }}
             <language>{{ . }}</language>
         {{end}}
-        {{ with .Site.Author.email }}
+        {{ with $authorEmail }}
             <managingEditor>{{ . }}
-                {{ with $.Site.Author.name }} ({{ . }}){{ end }}
+                {{ with $authorName }} ({{ . }}){{ end }}
             </managingEditor>
         {{end}}
-        {{ with .Site.Author.email }}
+        {{ with $authorEmail }}
             <webMaster>{{ . }}
-                {{ with $.Site.Author.name }} ({{ . }}){{ end }}
+                {{ with $authorName }} ({{ . }}){{ end }}
             </webMaster>
         {{end}}
         {{ with .Site.Copyright }}
