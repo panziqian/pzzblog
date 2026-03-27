@@ -62,7 +62,16 @@
                                         {{- .title -}}
                                     {{- end -}}
                                 </td>
-                                <td data-pagefind-ignore class="record-{{ $eoo }}-cell">{{ i18n "mark_date" }}{{ substr .mark_date 0 10 | time.Format ":date_long" }}</td>
+                                <td data-pagefind-ignore class="record-{{ $eoo }}-cell">
+                                    {{ $markDate := default "" .mark_date }}
+                                    {{ if ge (len $markDate) 10 }}
+                                        {{ i18n "mark_date" }}{{ substr $markDate 0 10 | time.Format ":date_long" }}
+                                    {{ else if ge (len $markDate) 7 }}
+                                        {{ i18n "mark_date" }}{{ substr $markDate 0 7 }}
+                                    {{ else }}
+                                        {{ i18n "mark_date" }}{{ $markDate }}
+                                    {{ end }}
+                                </td>
                                 <td data-pagefind-ignore class="record-{{ $eoo }}-cell">{{ i18n "my_score" }}{{ .my_score }}</td>
                             </tr>
                             <tr>
@@ -97,8 +106,9 @@
         <!-- 下面是看过的电影 -->
             {{ $film_overview := dict }}
             {{ $total_score_film := 0 }}
+            {{ $sortedFilms := sort $value.film "mark_date" "desc" }}
             <!-- 先 range 一遍，得到年份分布，即每一年分别标记了多少 -->
-            {{ range $value.film }}
+            {{ range $sortedFilms }}
                 {{ if (index $film_overview (substr .mark_date 0 4)) }}
                     {{ $film_overview = merge $film_overview
                         (dict (substr .mark_date 0 4) (add 1
@@ -114,10 +124,10 @@
             {{ end }}
             <p data-pagefind-ignore style="color: var(--c-read); margin: auto;">-----</p>
             <p data-pagefind-ignore style="color: var(--c-read); margin: auto;">
-                {{ i18n "total_film" (len $value.film) }}
+                {{ i18n "total_film" (len $sortedFilms) }}
             </p>
             <p data-pagefind-ignore style="color: var(--c-read); margin: auto;">
-                {{ i18n "average_score" ((div (add $total_score_film 0.0) (len $value.film)) | lang.FormatNumber 2) }}
+                {{ i18n "average_score" ((div (add $total_score_film 0.0) (len $sortedFilms)) | lang.FormatNumber 2) }}
             </p>
             <p data-pagefind-ignore style="color: var(--c-read); margin: auto;">-----</p>
             <div class="record-table-wrapper">
@@ -131,12 +141,12 @@
                     </colgroup>
                     <tbody>
                         {{ $curr_year := 0 }}
-                        {{ $curr_num := (len $value.film) }}
+                        {{ $curr_num := (len $sortedFilms) }}
                         {{ $eoo := "odd" }}
                         {{ if (modBool $curr_num 2) }}
                             {{ $eoo = "even" }}
                         {{ end }}
-                        {{ range $value.film }}
+                        {{ range $sortedFilms }}
                             {{ if ne (substr .mark_date 0 4) $curr_year }}
                                 {{ $curr_year = (substr .mark_date 0 4) }}
                                 <tr data-pagefind-ignore>
@@ -155,7 +165,14 @@
                                     {{- end -}}
                                 </td>
                                 <td data-pagefind-ignore class="record-{{ $eoo }}-cell">
-                                    {{ i18n "mark_date" }}{{ substr .mark_date 0 10 | time.Format ":date_long" }}
+                                    {{ $markDate := default "" .mark_date }}
+                                    {{ if ge (len $markDate) 10 }}
+                                        {{ i18n "mark_date" }}{{ substr $markDate 0 10 | time.Format ":date_long" }}
+                                    {{ else if ge (len $markDate) 7 }}
+                                        {{ i18n "mark_date" }}{{ substr $markDate 0 7 }}
+                                    {{ else }}
+                                        {{ i18n "mark_date" }}{{ $markDate }}
+                                    {{ end }}
                                 </td>
                                 <td data-pagefind-ignore class="record-{{ $eoo }}-cell">
                                     {{ i18n "my_score" }}{{ .my_score }}
@@ -172,7 +189,8 @@
                                 </td>
                             </tr>
                             <tr data-pagefind-ignore>
-                                <td class="record-{{ $eoo }}-cell" colspan="2">{{ i18n "director" }}{{ .director }}</td>
+                                {{ $productionCompany := default .director .production_company }}
+                                <td class="record-{{ $eoo }}-cell" colspan="2">{{ i18n "production_company" }}{{ $productionCompany }}</td>
                             </tr>
                             <tr data-pagefind-ignore>
                                 <td class="record-{{ $eoo }}-cell">{{ i18n "film_type" }}{{ .film_type }}</td>
