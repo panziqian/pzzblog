@@ -17,3 +17,7 @@ autoNumberHeadings: false
 
 更新记录板块，用于记录笔者看过的书籍以及番剧、电影等。主要参考了现使用的hugo主题作者的[一篇文章](https://zerovip.github.io/zh/82988/)。
 此外博客之后的博文的`front matter`转为使用`yaml`格式书写。
+
+# 2026-03-27
+
+更新记录板块，能够通过python脚本拉取[TMDB](https://www.themoviedb.org/)中的数据自动填入记录中。使用脚本将原来的记录进行了更新和补充。
