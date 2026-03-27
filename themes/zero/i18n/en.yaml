@@ -98,6 +98,9 @@
 - id: director
   translation: "Director: "
 
+- id: production_company
+  translation: "Production Company: "
+
 - id: average_score
   translation: " (my average score is: {{ . }})"
 

@@ -98,6 +98,9 @@
 - id: director
   translation: "Réalisateur: "
 
+- id: production_company
+  translation: "Société de production: "
+
 - id: average_score
   translation: " (mon score moyen est: {{ . }})"
 

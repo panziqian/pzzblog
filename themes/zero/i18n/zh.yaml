@@ -94,6 +94,9 @@
 - id: director
   translation: 导演：
 
+- id: production_company
+  translation: 制作公司：
+
 - id: average_score
   translation: "（我的平均打分是：{{ . }}）"
 
