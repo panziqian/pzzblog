@@ -22,13 +22,36 @@
         
         
             <lastBuildDate>
-                Fri, 13 Mar 2026 00:00:00 UTC
+                Fri, 27 Mar 2026 00:00:00 UTC
             </lastBuildDate>
         
         
         
     
     
+    
+        <item>
+            <title>看过的番剧</title>
+            <link>/record/film/</link>
+            <pubDate>Fri, 27 Mar 2026 00:00:00 UTC</pubDate>
+            
+            <guid isPermaLink="false">/record/film/</guid>
+            <description>&lt;p&gt;这些是我看过的番剧，之后如果有看过的电影也会放在该栏。我打算陆续的将建站之前看过的番剧导入到本站中，但具体的看完的日期或许并不准确，只能保证年份是正确的。番剧的相关信息使用 python 脚本从 &lt;a href=&#39;https://www.themoviedb.org/&#39;
+    
+    
+        target=&#39;_blank&#39; rel=&#39;noreferrer noopener&#39;
+    
+&gt;TDMB&lt;b&gt;&lt;sub&gt;⧉&lt;/sub&gt;&lt;/b&gt;&lt;/a&gt; 中导入。暂时不考虑进行评分，因为在我看来我能完全看完而不弃坑的番剧（比如&lt;a href=&#39;https://zh.wikipedia.org/wiki/%E5%9C%8B%E7%8E%8B%E6%8E%92%E5%90%8D&#39;
+    
+    
+        target=&#39;_blank&#39; rel=&#39;noreferrer noopener&#39;
+    
+&gt;国王排名&lt;b&gt;&lt;sub&gt;⧉&lt;/sub&gt;&lt;/b&gt;&lt;/a&gt;）都有吸引我的点，故我都认为不是一部差的番剧，我不想将不差的番剧进行对比或者踩一捧一，而我对其的感觉也不是简单的星级或者 ranking 能简单概括描述的。至于详细的评价，由于我时间有限，可能不太有时间对每一部都进行评价。如果是特别引起我共鸣的番剧，我会单独写一篇观后感（比如fate/zero，&lt;a href=&#39;http://localhost:1313/posts/life/fate-zero/&#39;
+    
+    
+&gt;由此&lt;/a&gt;跳转它的观后感）。我认为我看的番剧不仅留存着我看这些番剧时产生的感受，也保留着我看这些番剧的时候我的状态、心情和我的处境。每次回看番剧，我仿佛又回到了当时追番的时候，闻到了那个时候的味道。我认为这些回忆与感觉比番剧本身更为宝贵。&lt;/p&gt;
+</description>
+        </item>
     
         <item>
             <title>vscode插件安装失败问题的修复</title>
@@ -103,6 +126,13 @@ at FSReqCallback.wrapper [as oncomplete] (node:fs:671:5)&lt;/p&gt;
     
 &gt;一篇文章&lt;b&gt;&lt;sub&gt;⧉&lt;/sub&gt;&lt;/b&gt;&lt;/a&gt;。
 此外博客之后的博文的&lt;code&gt;front matter&lt;/code&gt;转为使用&lt;code&gt;yaml&lt;/code&gt;格式书写。&lt;/p&gt;
+&lt;h1&gt;2026-03-27&lt;/h1&gt;
+&lt;p&gt;更新记录板块，能够通过python脚本拉取&lt;a href=&#39;https://www.themoviedb.org/&#39;
+    
+    
+        target=&#39;_blank&#39; rel=&#39;noreferrer noopener&#39;
+    
+&gt;TMDB&lt;b&gt;&lt;sub&gt;⧉&lt;/sub&gt;&lt;/b&gt;&lt;/a&gt;中的数据自动填入记录中。使用脚本将原来的记录进行了更新和补充。&lt;/p&gt;
 </description>
         </item>
     
@@ -493,16 +523,6 @@ $$\vec{x}=A\vec{y}或\vec{y}=A^{-1}\vec{x} $$
 普适的代价是抽象。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;em&gt;善于运用直观思维。&lt;/em&gt;&lt;/p&gt;
-</description>
-        </item>
-    
-        <item>
-            <title>看过的番剧</title>
-            <link>/record/film/</link>
-            <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-            
-            <guid isPermaLink="false">/record/film/</guid>
-            <description>&lt;p&gt;这些是我看过的番剧。&lt;/p&gt;
 </description>
         </item>
     

@@ -140,6 +140,13 @@ at FSReqCallback.wrapper [as oncomplete] (node:fs:671:5)&lt;/p&gt;
     
 &gt;一篇文章&lt;b&gt;&lt;sub&gt;⧉&lt;/sub&gt;&lt;/b&gt;&lt;/a&gt;。
 此外博客之后的博文的&lt;code&gt;front matter&lt;/code&gt;转为使用&lt;code&gt;yaml&lt;/code&gt;格式书写。&lt;/p&gt;
+&lt;h1&gt;2026-03-27&lt;/h1&gt;
+&lt;p&gt;更新记录板块，能够通过python脚本拉取&lt;a href=&#39;https://www.themoviedb.org/&#39;
+    
+    
+        target=&#39;_blank&#39; rel=&#39;noreferrer noopener&#39;
+    
+&gt;TMDB&lt;b&gt;&lt;sub&gt;⧉&lt;/sub&gt;&lt;/b&gt;&lt;/a&gt;中的数据自动填入记录中。使用脚本将原来的记录进行了更新和补充。&lt;/p&gt;
 </description>
                         </item>
                     
