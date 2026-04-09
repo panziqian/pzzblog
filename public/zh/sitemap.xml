@@ -4,7 +4,7 @@
   
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2026-03-27T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-08T21:31:34+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -15,6 +15,35 @@
                 hreflang="zh"
                 href="http://localhost:1313/"
                 />
+  </url><url>
+    <loc>http://localhost:1313/posts/life/</loc>
+    <lastmod>2026-04-08T21:31:34+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/posts/life/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="http://localhost:1313/posts/life/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2026-04-08T21:31:34+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="http://localhost:1313/posts/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/posts/life/re0/re0/</loc>
+    <lastmod>2026-04-08T21:31:34+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/record/</loc>
     <lastmod>2026-03-27T00:00:00+00:00</lastmod>
@@ -32,34 +61,8 @@
                 href="http://localhost:1313/posts/study/"
                 />
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2026-03-13T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="http://localhost:1313/posts/"
-                />
-  </url><url>
     <loc>http://localhost:1313/posts/study/vscode-ext-fix/</loc>
     <lastmod>2026-03-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/life/</loc>
-    <lastmod>2025-09-03T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/posts/life/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="http://localhost:1313/posts/life/"
-                />
   </url><url>
     <loc>http://localhost:1313/posts/life/fate-zero/</loc>
     <lastmod>2025-09-03T00:00:00+00:00</lastmod>
@@ -67,14 +70,8 @@
     <loc>http://localhost:1313/posts/study/blog-dev/</loc>
     <lastmod>2025-08-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/life/sumu1/</loc>
-    <lastmod>2025-08-27T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/posts/life/hometown/</loc>
     <lastmod>2025-06-26T16:22:05+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/life/19birthday/</loc>
-    <lastmod>2025-04-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/study/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2025-03-26T16:51:19+08:00</lastmod>
