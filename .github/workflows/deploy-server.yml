@@ -1,0 +1,35 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches: [public]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: "latest"
+          extended: true
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Deploy via rsync
+        env:
+          SSH_KEY: ${{ secrets.SERVER_SSH_KEY }}
+          SSH_HOST: ${{ secrets.SERVER_HOST }}
+          SSH_USER: ${{ secrets.SERVER_USER }}
+          SSH_PATH: ${{ secrets.SERVER_PATH }}
+        run: |
+          echo "$SSH_KEY" > /tmp/ssh_key
+          chmod 600 /tmp/ssh_key
+          rsync -avz --delete -e "ssh -i /tmp/ssh_key -o StrictHostKeyChecking=no -p 22" \
+            ./public/ ${SSH_USER}@${SSH_HOST}:${SSH_PATH}
