@@ -1,12 +1,14 @@
-+++
-date = '2025-03-26T16:51:19+08:00'
-draft = false
-title = '线性代数笔记'
-summary = '本文简要的整理了作者学习线性代数的笔记'
-math = true
-section = 'study'
-column = 'study'
-+++
+---
+date: 2025-03-26T16:51:19+08:00
+draft: false
+title: 线性代数笔记
+description: 本文简要的整理了作者学习线性代数的笔记
+math: true
+section: study
+column: study
+tags: ["Linear Algebra","note"]
+categories: study
+---
 
 
 

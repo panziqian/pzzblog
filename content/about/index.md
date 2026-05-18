@@ -24,7 +24,7 @@ autoNumberHeadings = false
   - **Email**：pzqpzq@stu.xjtu.edu.cn
   - [**GitHub**](https://github.com/panziqian)
 
-我是一名来自西安交通大学计算机系的2024级在读学生，目前正在艰苦的探索自己的兴趣和研究方向。
+我是一名来自西安交通大学计算机系的2024级在读学生，目前正在探索自己的兴趣和研究方向。
 
 # 关于写博客
 
@@ -34,4 +34,4 @@ autoNumberHeadings = false
 
 # 关于此博客
 
-这个博客框架基于[Hugo](https://gohugo.io/)，Hugo使用的主题来自[这位开发者](https://github.com/zerovip/hugo-theme-zero)，基本完全采用了这个主题的机制，没有做什么改动。（其实是自己没学前端，不咋会改）可能之后有精力会加一些自己的小巧思吧。
+这个博客框架基于[Hugo](https://gohugo.io/)，目前使用的 Hugo 主题为 [Stack](https://github.com/CaiJimmy/hugo-theme-stack)，在此基础上进行了小范围的修改以适配自己的需求和审美。

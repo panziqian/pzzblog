@@ -1,11 +1,13 @@
-+++
-date = '2025-06-26T16:22:05+08:00'
-draft = false
-summary = '简要介绍作者的家乡~'
-title = 'Hometown'
-column = 'life'
-section = 'life'
-+++
+---
+date: 2025-06-26T16:22:05+08:00
+draft: false
+description: 简要介绍作者的家乡~
+title: Hometown
+column: life
+section: life
+categories: life 
+tags: ["Hong Kong"]
+---
 
 # 总述
 **香港**全称香港特别行政区，地域包括香港岛、九龙和新界，位处广东省珠江口东侧。

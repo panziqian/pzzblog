@@ -1,11 +1,17 @@
 ---
 title: 博客更新日志
 date: 2025-08-31
-summary: 博客更新及修改日志
+description: 博客更新及修改日志
 column: study
 section: study
+categories: study
+tags: ["dev-blog"]
 autoNumberHeadings: false
 ---
+
+# 2026-05-18
+
+更换成 [stack](https://github.com/CaiJimmy/hugo-theme-stack) 主题。
 
 # 2026-05-14
 

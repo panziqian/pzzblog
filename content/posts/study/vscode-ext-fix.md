@@ -3,7 +3,7 @@ date: 2026-03-13
 title: vscode插件安装失败问题的修复
 section: study
 column: study
-summary: vscode 更新后插件安装失败问题的修复和探索
+description: vscode 更新后插件安装失败问题的修复和探索
 draft: false
 ---
 

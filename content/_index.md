@@ -1,10 +1,14 @@
-+++
-[menu.main]
-    identifier = "home"
-    name = "首页"
-    weight = 1
-    params = { icon = "home" }
-+++
+---
+menu: 
+    main:
+        identifier: home
+        name: 主页
+        weight: -90
+        params:
+            icon: home
+categories: life
+tags: []
+---
 
 # 欢迎来到我的博客
 
