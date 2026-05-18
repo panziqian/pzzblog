@@ -3,14 +3,14 @@
 title = 'About'
 discription = 'About Page'
 draft = false
-list_hide = true
 date = 2025-08-26
 autoNumberHeadings = false
 
 [menu.main]
     identifier = "about"
-    name = "👤 关于"
+    name = "关于"
     weight = 3
+    params = { icon = "messages" }
 +++
 
 # 关于我

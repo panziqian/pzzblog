@@ -1,0 +1,48 @@
+.article-main-card {
+    background: var(--card-background);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--shadow);
+    padding: var(--card-padding);
+    margin-bottom: 1.5rem;
+    color: var(--card-text-color-main);
+}
+
+.data-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.data-item {
+    background: var(--card-background);
+    border: 1px solid var(--card-border);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    box-shadow: var(--shadow);
+    font-family: var(--article-font-family);
+    color: var(--card-text-color-main);
+}
+
+.data-item h3 {
+    font-size: 2rem;
+    margin: 0 0 0.5rem;
+    color: var(--card-text-color-main);
+}
+
+.data-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    font-size: 1.5rem;
+    color: var(--card-text-color-secondary);
+    line-height: 1.6;
+}
+
+.data-comment {
+    color: var(--card-text-color-secondary);
+    font-size: 1.5rem;
+    line-height: 1.7;
+    margin: 0.75rem 0 0;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--card-border);
+}

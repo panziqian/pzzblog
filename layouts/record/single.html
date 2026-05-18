@@ -1,0 +1,66 @@
+{{ define "body-class" }}article-page{{ end }}
+
+{{ define "main" }}
+    {{ $dataKey := .File.ContentBaseName }}
+    {{ $items := index hugo.Data.zh $dataKey }}
+
+    <div class="article-main-card">
+        <header class="article-header">
+            <div class="article-details">
+                <div class="article-title-wrapper">
+                    <h2 class="article-title">
+                        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    </h2>
+                </div>
+            </div>
+        </header>
+        {{ with .Content }}
+            <section class="article-content">
+                {{ . }}
+            </section>
+        {{ end }}
+    </div>
+
+    {{ if $items }}
+        {{ $sorted := sort $items "mark_date" "desc" }}
+        <div class="data-list">
+            {{ if eq $dataKey "book" }}
+                {{ range $sorted }}
+                    <div class="data-item">
+                        <h3>{{ .title }}</h3>
+                        <div class="data-meta">
+                            <span>作者：{{ .author }}</span>
+                            <span>出版年份：{{ .public_year }}</span>
+                            {{ with .mark_date }}<span>标记日期：{{ . }}</span>{{ end }}
+                        </div>
+                        {{ with .my_comment }}
+                            <p class="data-comment">{{ . }}</p>
+                        {{ end }}
+                    </div>
+                {{ end }}
+            {{ else if eq $dataKey "film" }}
+                {{ range $sorted }}
+                    <div class="data-item">
+                        <h3>{{ .title }}</h3>
+                        <div class="data-meta">
+                            {{ with .ori_name }}<span>原名：{{ . }}</span>{{ end }}
+                            <span>年份：{{ .public_year }}</span>
+                            <span>地区：{{ .produce_country }}</span>
+                            <span>类型：{{ .film_type }}</span>
+                            {{ with .mark_date }}<span>标记日期：{{ . }}</span>{{ end }}
+                            {{ with .imdb_id }}<span><a href="https://www.imdb.com/title/{{ . }}/" target="_blank" rel="noopener">IMDb</a></span>{{ end }}
+                        </div>
+                    </div>
+                {{ end }}
+            {{ end }}
+        </div>
+    {{ else }}
+        <section class="article-content-card">
+            <p>暂无数据</p>
+        </section>
+    {{ end }}
+{{ end }}
+
+{{ define "right-sidebar" }}
+    {{ partial "sidebar/right.html" (dict "Context" . "Scope" "page") }}
+{{ end }}

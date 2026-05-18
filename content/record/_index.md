@@ -1,8 +1,9 @@
 +++
 [menu.main]
     identifier = "record"
-    name = "📖 记录"
+    name = "记录"
     weight = 2
+    params = { icon = "archives" }
 title = "记录"
 +++
 

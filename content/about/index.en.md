@@ -8,8 +8,8 @@ date = 2025-08-26
 
 [menu.main]
     identifier = "about"
-    name = "👤 About"
-    weight = 2
+    name = "About"
+    params = { icon = "messages" }
 +++
 
 # About me

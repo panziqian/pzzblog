@@ -1,8 +1,9 @@
 +++
 [menu.main]
     identifier = "home"
-    name = "🏠 首页"
+    name = "首页"
     weight = 1
+    params = { icon = "home" }
 +++
 
 # 欢迎来到我的博客
