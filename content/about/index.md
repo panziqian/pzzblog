@@ -21,7 +21,7 @@ autoNumberHeadings = false
   - 看番
   - JPOP
 - **联系方式**
-  - **Email**：pzqpzq@stu.xjtu.edu.cn
+  - **Email**：panziqian0402@gmail.com
   - [**GitHub**](https://github.com/panziqian)
 
 我是一名来自西安交通大学计算机系的2024级在读学生，目前正在探索自己的兴趣和研究方向。
