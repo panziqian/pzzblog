@@ -5,6 +5,7 @@ discription = 'About Page'
 draft = false
 date = 2025-08-26
 autoNumberHeadings = false
+image = "saber.jpg"
 
 [menu.main]
     identifier = "about"
