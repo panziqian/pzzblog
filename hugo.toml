@@ -24,6 +24,14 @@ theme = "hugo-theme-stack"
         [params.article.license]
             enabled = false
 
+        [parms.article.alertIcon]
+            # Alert icons for different alert types (note, tip, important, warning, caution)
+            note      = "📝"
+            tip       = "💡"
+            important = "📌"
+            warning   = "⚠️"
+            caution   = "🚨"
+
     [params.widgets]
         homepage = [
             { type = "search" },
@@ -68,3 +76,11 @@ theme = "hugo-theme-stack"
 [imaging]
   resampleFilter = "CatmullRom"
   quality = 75
+
+[menu]
+    [[menu.social]]
+        identifier = "github"
+        name = "Github"
+        url = "https://github.com/panziqian"
+        [menu.social.params]
+            icon = "brand-github"
