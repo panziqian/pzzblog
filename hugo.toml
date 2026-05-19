@@ -6,7 +6,7 @@ theme = "hugo-theme-stack"
 
 [params]
     description = "一个使用 Hugo & Stack 搭建的博客"
-    mainSections = ["posts", "record"]
+    mainSections = ["posts"]
 
     [params.footer]
         since = 2026
