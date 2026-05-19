@@ -36,13 +36,13 @@ draft: false
 
 在这一部分中，笔者会简单列出备份 vscode 插件的命令，可能在日后会单开一篇博客介绍配置的备份。
 
-```
+```bash
 code --list-extensions > vscode-extensions.txt
 ```
 
 通过这行命令能够将 vscode 中已安装插件的列表导出至 `txt` 文件中。之后可以通过这行命令重新安装列表中的插件。
 
-```
+```bash
 cat vscode-extensions.txt | xargs -n 1 code --install-extension
 ```
 

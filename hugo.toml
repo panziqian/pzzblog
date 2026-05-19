@@ -72,6 +72,8 @@ theme = "hugo-theme-stack"
   [markup.tableOfContents]
     startLevel = 1
     endLevel = 2
+  [markup.highlight]
+    noClasses = false
 
 [imaging]
   resampleFilter = "CatmullRom"
