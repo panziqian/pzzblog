@@ -4,6 +4,8 @@ title: vscode插件安装失败问题的修复
 section: study
 column: study
 description: vscode 更新后插件安装失败问题的修复和探索
+categories: study
+tags: ["vscode","extension"]
 draft: false
 ---
 
