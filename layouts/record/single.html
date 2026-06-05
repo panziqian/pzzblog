@@ -19,6 +19,11 @@
                 {{ . }}
             </section>
         {{ end }}
+        {{ if eq $dataKey "film" }}
+            <div class="record-counter">
+                <p>共 <span class="num">{{ len $items }}</span> 部番剧</p>
+            </div>
+        {{ end }}
     </div>
 
     {{ if $items }}

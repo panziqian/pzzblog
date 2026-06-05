@@ -12,6 +12,25 @@
     color: var(--card-text-color-main);
 }
 
+.record-counter {
+    border-top: 1px solid var(--card-separator-color);
+    padding: 1rem var(--card-padding) 0;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: var(--card-text-color-secondary);
+}
+
+.record-counter p {
+    margin: 0;
+}
+
+.record-counter .num {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin: 0 0.4rem;
+}
+
 .data-list {
     display: flex;
     flex-direction: column;
