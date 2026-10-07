@@ -1,4 +1,4 @@
-baseURL = "https://pzzblog.netlify.app/"
+baseURL = "https://blog.kiritobp.qzz.io/"
 defaultContentLanguage = "zh"
 defaultContentLanguageInSubdir = false
 title = "pzzの博客"
